@@ -2,9 +2,13 @@ header {
   background-color: #efefef;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
+
 header ul {
   display: flex;
   flex-direction: row;
@@ -23,4 +27,61 @@ header a {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+}
+
+.banner {
+  background-image: url(banner-background.jpg);
+  top: -100px;
+  left: 0px;
+  background-color: white;
+  z-index: 999;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.banner .description {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+.banner .description img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  text-align: center;
+}
+
+.banner .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.description p {
+  color: white;
+}
+
+.description h2 {
+  color: white;
+}
+
+.description h6 {
+  color: white;
 }
