@@ -136,3 +136,18 @@ header img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
+.contain {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.item {
+  align-items: center;
+  background-color: tomato;
+  color: white;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
