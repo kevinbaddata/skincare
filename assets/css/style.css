@@ -1,9 +1,8 @@
 header {
   background-color: #efefef;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 5px;
-
   width: 100%;
 }
 
@@ -27,7 +26,7 @@ header a {
   color: #182f6e;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -88,16 +87,27 @@ header img {
 
 .banner .bluebox {
   display: block;
-  opacity: 0.6;
+  opacity: 0.8;
   width: 100%;
   height: 13px;
-  background-color: #64bcd3;
+  background-color: #75b0bf;
+  position: relative;
+  top: -13px;
+  left: 0;
+  z-index: 999999;
+  margin-bottom: -13px;
 }
 
 .products {
   margin-top: 10px;
 }
-
+.products .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
 .products a {
   color: #741c7c;
   font-weight: 500;
