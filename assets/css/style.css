@@ -161,3 +161,74 @@ header img {
 .owl-carousel img {
   max-height: 93vh !important;
 }
+
+.information {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.information .row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 1em;
+}
+.information img {
+  width: 100%;
+  height: auto;
+}
+
+.information h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.information p {
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  background-color: #182f6e;
+  border-radius: 5px;
+  text-transform: capitalize;
+  padding: 20px 0px;
+  overflow: hidden;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.effect.effect-5 {
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-5:before {
+  content: "\>>";
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 30px;
+  background-color: #fff;
+  opacity: 0.3;
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-5:hover {
+  text-indent: 30px;
+}
+.effect.effect-5:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
