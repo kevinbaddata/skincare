@@ -4,7 +4,7 @@ $(".slider .owl-carousel").owlCarousel({
   rewind: true,
   responsiveClass: true,
   autoHeight: true,
-  autoplayTimeout: 7000,
+  autoplayTimeout: 4000,
   smartSpeed: 735,
   dots: false,
   maxHeight: 80,
