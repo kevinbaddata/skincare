@@ -254,3 +254,62 @@ footer {
   background: linear-gradient(#00aeef, #182f6e);
   color: #878787 !important;
 }
+
+.face-banner {
+  position: relative;
+  color: red;
+}
+
+.face-banner .text {
+  position: absolute;
+  bottom: 20%;
+  left: 30px;
+  right: 70%;
+}
+
+.face-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+}
+
+.face-banner .text h2 {
+}
+
+.face-products {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.face-products .card {
+  padding: 10px;
+}
+
+.face-products .bg {
+  background-image: url("../img/bg.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.face-products h3 {
+  text-align: center;
+}
+
+.card {
+  border: none;
+}
+
+.card button {
+  border: none;
+  background: linear-gradient(#00aeef, #182f6e);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: all 1s;
+}
+
+.card button:hover {
+  background: linear-gradient(to bottom right, #00aeef, white);
+  color: #182f6e;
+}
