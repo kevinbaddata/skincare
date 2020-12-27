@@ -37,8 +37,8 @@ header img {
 
 header div {
   text-align: center;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-top: 3px;
   background-color: #f41f35;
   color: white;
 }
@@ -257,7 +257,7 @@ footer {
 
 .face-banner {
   position: relative;
-  color: red;
+  color: #f0cdbd;
 }
 
 .face-banner .text {
@@ -312,4 +312,51 @@ footer {
 .card button:hover {
   background: linear-gradient(to bottom right, #00aeef, white);
   color: #182f6e;
+}
+.how-to-use img {
+  display: block;
+  margin-top: 20px;
+}
+
+.how-to-use h4 {
+  text-align: center;
+}
+
+.how-to-use a {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #64bcd3;
+}
+
+.how-to-use h2 {
+  text-align: center;
+}
+
+.how-to-use {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f3f3f3;
+}
+
+.hair-banner img {
+  width: 100%;
+  height: auto;
+}
+
+.hair-banner h1 {
+  font-size: 50px;
+}
+
+.hair-banner button {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+  background-color: #182f6e;
 }
