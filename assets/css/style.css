@@ -1,3 +1,13 @@
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 header {
   background-color: #efefef;
 
@@ -341,22 +351,62 @@ footer {
   padding-bottom: 20px;
   background-color: #f3f3f3;
 }
-
+.hair-banner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f3f3f3;
+}
 .hair-banner img {
   width: 100%;
   height: auto;
 }
 
 .hair-banner h1 {
-  font-size: 50px;
+  font-size: 40px;
+  margin-left: 20px;
+  color: #182f6e;
 }
 
 .hair-banner button {
-  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
   border: none;
-  border-radius: 5px;
   color: white;
 
   cursor: pointer;
   background-color: #182f6e;
+  padding: 30px;
+  border-radius: 50px;
+  border-color: none;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hair-banner button:hover {
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  background-color: #516db9;
+}
+
+.hair-shop img {
+  max-height: 300px;
+}
+
+.hair-shop .card {
+  color: #182f6e;
+  background-color: rgb(243, 249, 252);
+  padding: 5px;
+}
+
+.card span {
+  color: white;
+  padding: 2px;
+  background-color: #182f6e;
+  border: none;
+  border-radius: 5px;
+  float: right;
+  display: inline;
+  width: 50px;
 }
