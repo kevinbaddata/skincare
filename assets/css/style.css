@@ -445,3 +445,36 @@ footer {
   margin-top: 30px;
   padding-right: 20px;
 }
+.shave-banner .centered {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+  width: 300px;
+  text-align: left;
+}
+.shave-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bestman {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+
+.bestman img {
+  width: 50px;
+  height: 50px;
+}
+
+.bestman * {
+  margin-top: 20px;
+}
+
+.bestman {
+  color: #182f6e;
+}
