@@ -55,6 +55,36 @@ $(".slider-hair .owl-carousel").owlCarousel({
     },
   },
 });
+$(".comments  .owl-carousel").owlCarousel({
+  autoplay: true,
+  lazyLoad: true,
+  rewind: true,
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 4000,
+  smartSpeed: 2735,
+  dots: true,
+  nav: true,
+  dotsEach: true,
+  maxHeight: 80,
+  responsive: {
+    0: {
+      items: 1,
+    },
+
+    600: {
+      items: 1,
+    },
+
+    1024: {
+      items: 1,
+    },
+
+    1366: {
+      items: 1,
+    },
+  },
+});
 
 
 

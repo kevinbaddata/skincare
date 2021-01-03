@@ -448,7 +448,7 @@ footer {
 .shave-banner .centered {
   position: absolute;
   top: 30%;
-  left: 10%;
+  left: 5%;
   color: white;
   width: 300px;
   text-align: left;
@@ -477,4 +477,33 @@ footer {
 
 .bestman {
   color: #182f6e;
+}
+
+.shave-products h5 {
+  text-align: center;
+  color: #182f6e;
+  margin-top: 10px;
+}
+
+.shave-products {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.comments {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.owl-nav button {
+  padding: 10px !important;
+  color: white !important;
+  background-color: #182f6e !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
 }
