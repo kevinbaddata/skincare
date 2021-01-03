@@ -87,6 +87,36 @@ $(".comments  .owl-carousel").owlCarousel({
 });
 
 
+$(".perfume-products  .owl-carousel").owlCarousel({
+  autoplay: true,
+  lazyLoad: true,
+  rewind: true,
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 4000,
+  smartSpeed: 2735,
+  dots: false,
+  nav: false,
+  dotsEach: false,
+  maxHeight: 80,
+  responsive: {
+    0: {
+      items: 1,
+    },
+
+    600: {
+      items: 3,
+    },
+
+    1024: {
+      items: 5,
+    },
+
+    1366: {
+      items: 7,
+    },
+  },
+});
 
 
 

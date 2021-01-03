@@ -507,3 +507,43 @@ footer {
   margin-left: 5px !important;
   margin-right: 5px !important;
 }
+
+.perfume-banner {
+  padding-bottom: 50px;
+}
+
+.perfume-banner .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfume-banner a {
+  margin-top: 20px;
+  margin-left: 20px;
+  border: none;
+  color: white;
+
+  cursor: pointer;
+  background-color: #182f6e;
+  padding: 10px;
+  border-radius: 50px;
+  border-color: none;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.perfume-banner a:hover {
+  animation: pulse;
+  animation-duration: 2s;
+  background-color: #516db9;
+}
+
+.perfume-products .card {
+  padding: 20px;
+  text-align: center;
+}
