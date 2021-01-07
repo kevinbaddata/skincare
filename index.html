@@ -30,6 +30,55 @@
   </head>
 
   <body>
+    <div id="cart">
+      <div
+        class="modal"
+        style="display: block"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="cart_close()"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+                onclick="cart_close()"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Order now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fixed-bottom-right" onclick="cart_open()">
+      <!-- <span class="total-count"></span> -->
+      <img src="assets/svg/shopping-cart.svg" alt="" />
+    </div>
+    <div class="clear-cart fixed-bottom-right2">
+      <img src="assets/svg/clear.svg" alt="" />
+    </div>
+
     <header>
       <ul>
         <li><a href="face.html">ansiktet</a></li>
@@ -63,6 +112,13 @@
           />
           <h6>Take care, be safe</h6>
           <h2>Skin care</h2>
+          <a
+            href="#"
+            data-name="Orange"
+            data-price="0.5"
+            class="add-to-cart btn btn-primary"
+            >Add to cart</a
+          >
           <p>
             Det finns förtroende för vacker hud. Det är därför vårt
             hudvårdssortiment ger överlägsen vård för att förvandla din rutin
@@ -76,47 +132,27 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-12 product">
             <img src="https://picsum.photos/200/300" alt="" />
-            <h3>Perfume</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum quas nam aut animi odio laboriosam officiis atque
-              quidem, sint eum in nulla odit ipsum nostrum quasi reprehenderit
-              recusandae distinctio deleniti!
-            </p>
-            <a href="">go to catg 1</a>
+            <h3>Ansiktet</h3>
+            <p>Clicka för att se våra huvudvårdsprdukter</p>
+            <a href="face.html">Gå till ansiktssidan </a>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 product">
             <img src="https://picsum.photos/200/300" alt="" />
-            <h3>Category 2</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum quas nam aut animi odio laboriosam officiis atque
-              quidem, sint eum in nulla odit ipsum nostrum quasi reprehenderit
-              recusandae distinctio deleniti!
-            </p>
-            <a href="">go to catg 2</a>
+            <h3>Hår Produkter</h3>
+            <p>Clicka för att se våra hårsprodukter</p>
+            <a href="hair.html">Gå till hår sidan</a>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 product">
             <img src="https://picsum.photos/200/300" alt="" />
-            <h3>Category 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum quas nam aut animi odio laboriosam officiis atque
-              quidem, sint eum in nulla odit ipsum nostrum quasi reprehenderit
-              recusandae distinctio deleniti!
-            </p>
-            <a href="">go to catg 3</a>
+            <h3>Rakning</h3>
+            <p>Clicka för att se våra Rak produkter</p>
+            <a href="shave.html">Gå till den här sidan</a>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 product">
             <img src="https://picsum.photos/200/300" alt="" />
-            <h3>Category 4</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum quas nam aut animi odio laboriosam officiis atque
-              quidem, sint eum in nulla odit ipsum nostrum quasi reprehenderit
-              recusandae distinctio deleniti!
-            </p>
-            <a href="">go to catg 4</a>
+            <h3>Parfym</h3>
+            <p>Våra Parfym produkter</p>
+            <a href="perfume.html">Gå till våra Parfym produkter</a>
           </div>
         </div>
       </div>

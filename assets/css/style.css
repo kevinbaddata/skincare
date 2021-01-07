@@ -118,7 +118,7 @@ header div {
   position: relative;
   top: -13px;
   left: 0;
-  z-index: 999999;
+  z-index: 99999;
   margin-bottom: -13px;
 }
 
@@ -619,4 +619,34 @@ footer {
 
 .container h3 {
   text-align: center;
+}
+
+#cart {
+  height: 100%;
+  width: 200px;
+  background-color: #f3f3f3;
+  position: fixed !important;
+  color: black;
+  z-index: 999999;
+  overflow: auto;
+  display: none;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  bottom: 90px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  background-color: lightblue;
+  border-radius: 5px;
+}
+.fixed-bottom-right2 {
+  position: fixed;
+  border-radius: 5px;
+  bottom: 30px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  background-color: lightcoral;
 }
