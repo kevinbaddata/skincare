@@ -310,7 +310,8 @@ footer {
   align-items: center;
   position: relative;
 }
-.face-products h3 {
+.face-products h3,
+h4 {
   text-align: center;
 }
 
@@ -452,16 +453,38 @@ footer {
 }
 .shave-banner .centered {
   position: absolute;
-  top: 30%;
+  top: 10%;
   left: 5%;
   color: white;
   width: 300px;
   text-align: left;
+  z-index: 999;
 }
 .shave-banner {
   position: relative;
   text-align: center;
   color: white;
+}
+.shave-banner h2 {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 20px;
+}
+.shave-banner .overlay1 {
+  width: 200px;
+  height: 100px;
+  margin-left: 200px;
+  opacity: 0.735;
+  background-color: #75b0bf;
+}
+
+.shave-banner .overlay2 {
+  width: 200px;
+  height: 100px;
+  opacity: 0.735;
+  background-color: #75b0bf;
+  color: white;
+  font-size: 20px;
 }
 
 .bestman {
