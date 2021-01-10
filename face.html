@@ -23,16 +23,75 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="assets/css/style.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
+    <article>
+      <div id="cart">
+        <div class="container">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="cart_close()"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div>TOTAL: <span class="total-cart"></span> SEK</div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger clear-cart"
+                data-dismiss="modal"
+              >
+                <img
+                  src="assets/svg/clear.svg"
+                  alt="clear"
+                  width="20px"
+                  height="20px"
+                />
+                <span>Remove All</span>
+              </button>
+              <button type="button" class="btn btn-primary">
+                <span>Order Now</span>
+                <img
+                  src="assets/svg/order.svg"
+                  alt="order"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="cart-icon"
+        src="assets/svg/shopping-cart.svg"
+        alt="shop cart"
+        onclick="cart_open()"
+      />
+    </article>
+
+    <!-- HEADER -->
     <header>
       <ul>
-        <li><a href="face.html">ansiktet</a></li>
+        <li><a href="face.html">Ansiktet</a></li>
         <li><a href="hair.html">Hår</a></li>
         <li>
           <a href="index.html">
@@ -44,171 +103,242 @@
       </ul>
       <div>50% av på alla produkter</div>
     </header>
-    <section class="face-banner">
-      <img src="assets/img/face-banner1.png" alt="" />
-      <div class="text">
-        <h2>Hud Vård</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ipsa
-          praesentium non itaque autem est rem fugiat consequuntur molestiae cum
-          quidem officiis aliquam error tempore, culpa, obcaecati architecto
-          consequatur provident!
-        </p>
-      </div>
-    </section>
 
-    <section class="container face-products">
-      <div class="row">
-        <div class="col-lg-4 col-md-12">
-          <div class="card">
-            <div class="bg">
-              <img src="assets/img/download-removebg-preview (1).png" alt="" />
+    <main id="facepage">
+      <!-- BANNER -->
+      <section class="banner">
+        <div
+          class="image"
+          style="background: url('assets/img/face-banner1.png')"
+        ></div>
+        <div class="text">
+          <h2>Hud Vård</h2>
+          <br />
+          <p>Vi skapar hårsprodukter som män föreslår</p>
+          <p>Skrolla ner för att ta syn på våra produkter</p>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="container products">
+        <div class="row">
+          <div class="col-lg-4 col-md-12">
+            <div class="card">
+              <div class="bg">
+                <img
+                  src="assets/img/download-removebg-preview (1).png"
+                  alt="mandon face care"
+                />
+              </div>
+              <h3>MEN+CARE EXTRA</h3>
+              <h4>150Kr</h4>
+              <button
+                data-name="men+careextra"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
             </div>
-            <h3>MEN+CARE EXTRA</h3>
-            <h4>150Kr</h4>
-
-            <button
-              data-name="men+careextra"
-              data-price="150"
-              class="add-to-cart"
-            >
-              KÖP
-            </button>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="card">
+              <div class="bg">
+                <img
+                  src="assets/img/download-removebg-preview (1).png"
+                  alt="mandon face care"
+                />
+              </div>
+              <h3>MEN+CARE EXTRA</h3>
+              <h4>150Kr</h4>
+              <button
+                data-name="men+careextra"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="card">
+              <div class="bg">
+                <img
+                  src="assets/img/download-removebg-preview (1).png"
+                  alt="mandon face care"
+                />
+              </div>
+              <h3>MEN+CARE EXTRA</h3>
+              <h4>150Kr</h4>
+              <button
+                data-name="men+careextra"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="card">
-            <div class="bg">
-              <img src="assets/img/download-removebg-preview (1).png" alt="" />
+        <div class="row">
+          <div class="col-lg-1 col-md-12"></div>
+          <div class="col-lg-5 col-md-12">
+            <div class="card">
+              <div class="bg">
+                <img
+                  src="assets/img/51iZDesybqL._SY355_-removebg-preview.png"
+                  alt="mandon face care"
+                />
+              </div>
+              <h3>MEN+CARE EXTRA</h3>
+              <h4>150Kr</h4>
+              <button
+                data-name="men+careextra"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
             </div>
-            <h3>MEN+CARE EXTRA</h3>
-
-            <h4>150Kr</h4>
-
-            <button
-              data-name="men+careextra"
-              data-price="150"
-              class="add-to-cart"
-            >
-              KÖP
-            </button>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="card">
-            <div class="bg">
-              <img src="assets/img/download-removebg-preview (1).png" alt="" />
+          <div class="col-lg-5 col-md-12">
+            <div class="card">
+              <div class="bg">
+                <img
+                  src="assets/img/51iZDesybqL._SY355_-removebg-preview.png"
+                  alt="mandon face care"
+                />
+              </div>
+              <h3>MEN+CARE EXTRA</h3>
+              <h4>150Kr</h4>
+              <button
+                data-name="men+careextra"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
             </div>
-            <h3>MEN+CARE EXTRA</h3>
-            <h4>150Kr</h4>
-            <button
-              data-name="men+careextra"
-              data-price="150"
-              class="add-to-cart"
-            >
-              KÖP
-            </button>
           </div>
+          <div class="col-lg-1 col-md-12"></div>
         </div>
-      </div>
+      </section>
 
-      <div class="row">
-        <div class="col-lg-1 col-md-12"></div>
-
-        <div class="col-lg-5 col-md-12">
-          <div class="card">
-            <div class="bg">
+      <!-- HOWTO -->
+      <section class="howto">
+        <h2>GÖR DET MESTA AV DINA PRODUKTER</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
               <img
-                src="assets/img/51iZDesybqL._SY355_-removebg-preview.png"
-                alt=""
+                src="assets/img/TAB-490624.jpg.ulenscale.380x380.jpg"
+                alt="mandon face care"
               />
+              <img src="assets/svg/book.svg" alt="read" />
+              <h4>HUR HANTERAR MAN SVETTNING</h4>
+              <p>
+                <b> VÄLJ ETT STARKARE SKYDD.</b> Bekämpa svett med en deodorant
+                som jobbar hårt. Dove Men+Care Clean Comfort Antiperspirant
+                skyddar dig mot svett och lukt i 48 timmar. Den återfuktar också
+                huden, med ¼ fuktighetskräms teknologi, för en antiperspirant
+                deodorant som är tuff mot svett inte mot din hud <br />
+                APPLICERA INNAN DU LÄGGER DIG. Applicera en antiperspirant
+                deodorant innan du lägger dig istället för att göra det på
+                morgonen. Att använda antiperspirant deodorant på kvällen ger
+                den mer tid att sjunka in i huden och verka – då är du bättre
+                skyddad på morgonen <br />
+                ANVÄND DEODORANT PÅ SVAL HUD. Om du föredrar att använda
+                deodorant på morgonen, vänta i 10 minuter efter din dusch innan
+                du applicerar deodoranten. Antiperspiranta deodoranter verkar
+                bäst på en sval och torr hud <br />
+                ANVÄND TUNNA KLÄDER. Enklaste sättet att undvika svett är att
+                välja sina kläder noga. Syntetiska material och tighta kläder
+                kan ibland öka svettning. Välj istället tunnare kläder för att
+                ge din hud rum att andas <br />
+                TA MED DEODORANTEN. Svettning kan också vara ett resultat av
+                hårt jobb på gymmet. Om du går ofta till gymmet på dagen så
+                packa med en Dove Men+Care Extra Fresh roll-on Antiperspirant
+                deodorant. Deodoranten är kompakt och lätt att ta med sig, och
+                perfekt att ha med i gymväskan för att användas efter träningen
+                <br />
+                KONTINUERLIG ÖVERDRIVEN SVETTNING. Om du lider av överdriven
+                svettning hela tiden kan det vara fråga om hyperhidrosis, eller
+                överaktiva svettkörtlar. Om du tror det kan vara fråga om det
+                ska du kontakt din läkare, så kan du diskutera en diagnos och
+                möjlig vård
+              </p>
             </div>
-            <h3>MEN+CARE EXTRA</h3>
-            <h4>150Kr</h4>
-
-            <button
-              data-name="men+careextra"
-              data-price="150"
-              class="add-to-cart"
-            >
-              KÖP
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-5 col-md-12">
-          <div class="card">
-            <div class="bg">
+            <div class="col-lg-4 col-md-12">
+              <img src="assets/img/download.jpg" alt="mandon face care" />
+              <img src="assets/svg/book.svg" alt="read" />
+              <h4>DUSCHA OCH BEKÄMPA TORR HUD</h4>
+              <p>
+                UNDVIK TVÅL. Vanlig tvål kan torka ut din hud, försök att
+                undvika tvål som torkar ut din hud. Dove Men+Care Clean Comfort
+                Duschcrème använder MicroMoisture teknologi för att hjälpa att
+                återfukta huden och skydda den mot torka och irritation <br />
+                HÅLL DIG SVAL. Hett vatten kan torka din hud ännu mer, eftersom
+                det heta vattnet smälter bort hudens naturliga oljor. Håll dig
+                till varmt vatten istället, som rengör huden och behåller hudens
+                fukt <br />
+                DUSCHA KORT. Om du inte kan leva utan heta duschar, försök att
+                duscha kort istället för att inte bryta ner hudens proteiner som
+                håller den återfuktad <br />
+                RENGÖR OCH ÅTERFUKTA. De bästa duschcrèmerna för män både rengör
+                och återfuktar huden. Dove Men+Care Clean Comfort Duschcrème är
+                en återfuktande duschcrème skapad med MicroMoisture teknologi,
+                som återfuktar huden, rengör och är lätt att skölja av <br />
+                ANSIKTE. Ditt ansikte utsätts ofta för vind och sol som kan
+                torka ut huden. Dove Men+Care Fresh Awake Duschcrème hjälper att
+                skydda ditt ansikte och kropp från torrhet <br />
+                SKRUBBORSTE. Använd en skrubborste för att mjukgöra hård hud.
+                Kombinera med den bästa duschcrèmen för att rengöra och få bort
+                torr hud och döda hudceller
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-12">
               <img
-                src="assets/img/51iZDesybqL._SY355_-removebg-preview.png"
-                alt=""
+                src="assets/img/TAB-490661.jpg.ulenscale.380x380.jpg"
+                alt="mandon face care"
               />
+              <img src="assets/svg/book.svg" alt="read" />
+              <h4>MAXA DIN DUSCH MED DUSCHCRÈME FÖR MÄN</h4>
+              <p>
+                HÅR. Efter att du tvättat ditt hår sköljer du bort schamporester
+                från kroppen med Dove Men+Care Duschcrème
+                <br />
+                KROPP. Den bästa duschcrèmen för män rengör noggrant utan att
+                torka ut huden. Dove Men+Care Extra Fresh Duschcrème med
+                MicroMoisture teknologin hjälper huden behålla sin fukt med en
+                uppfriskande rengöring <br />
+                ANSIKTE. Utöver att Dove Men+Care Clean Comfort Duschcrème är en
+                bra duschcrème så är den perfekt som ansiktsrengöring också.
+                Använd varmt vatten, inte hett, för att undvika att torka ut
+                huden. Att tvätta ansiktet sist gör det fuktigt, som hjälper
+                till att ge jämnare resultat när man rakar sig <br />
+                RAKNING. Ångan från duschen kan hjälpa att göra ansiktshåret
+                mjukare, och gör det lättare att raka bort skägg stubb <br />
+                EFTER RAKNING. Minska risken för hudirritation genom att
+                applicera en after-shave efter du duschat. Den hjälper att hålla
+                huden mjuk och bekväm <br />
+                DEODORANT. Genom att vänta tills din kropp svalnat efter duschen
+                innan du applicerar antiperspirant deodorant kommer det att
+                hjälpa dig få den bästa effekten av deodoranten. Heta duschar
+                öppnar hudens porer och gör den mindre mottaglig för
+                antiperspiranter som appliceras
+              </p>
             </div>
-            <h3>MEN+CARE EXTRA</h3>
-            <h4>150Kr</h4>
-
-            <button
-              data-name="men+careextra"
-              data-price="150"
-              class="add-to-cart"
-            >
-              KÖP
-            </button>
           </div>
         </div>
-        <div class="col-lg-1 col-md-12"></div>
-      </div>
-    </section>
-    <section class="container how-to-use">
-      <h2>GÖR DET MESTA AV DINA PRODUKTER</h2>
-      <div class="row">
-        <div class="col-lg-4 col-md-12">
-          <img src="assets/img/download.jpg" alt="" />
-          <img
-            src="assets/svg/book.svg"
-            style="margin: 0 auto"
-            width="25px"
-            height="25px"
-            alt=""
-          />
+      </section>
+    </main>
 
-          <h4>fill it later</h4>
-          <a href="">fill it later</a>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <img src="assets/img/download.jpg" alt="" />
-          <img
-            src="assets/svg/book.svg"
-            width="25px"
-            height="25px"
-            alt=""
-            style="margin: 0 auto"
-          />
-
-          <h4>fill it later</h4>
-          <a href="">fill it later</a>
-        </div>
-
-        <div class="col-lg-4 col-md-12">
-          <img src="assets/img/download.jpg" alt="" />
-          <img
-            src="assets/svg/book.svg"
-            style="margin: 0 auto"
-            width="25px"
-            height="25px"
-            alt=""
-          />
-
-          <h4>fill it later</h4>
-          <a href="">fill it later</a>
-        </div>
-      </div>
-    </section>
+    <!-- FOOTER -->
     <footer class="text-white text-center text-lg-start">
       <div class="container p-4">
         <div class="row">
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
             <h5 class="text-uppercase">Mandon</h5>
-
             <p>
               Mandon är din professionella hudvårdsklinik på nätet som inte
               erbjuder allt – bara det bästa för din hud. Vi har ett unikt,
@@ -219,10 +349,8 @@
               kategori.
             </p>
           </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-4">
             <h5 class="text-uppercase">Länkar</h5>
-
             <ul class="list-unstyled mb-0">
               <li>
                 <a href="face.html" class="text-white">Ansikts</a>
@@ -238,14 +366,10 @@
               </li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-0">Pren</h5>
-
             <div class="form-outline mb-4">
-              <label class="form-label" for="form5Example2"
-                >Via Whatsapp
-              </label>
+              <label class="form-label" for="form5Example2">Via Contact</label>
               <input type="email" id="form5Example2" class="form-control" />
             </div>
             <div class="col-auto mb-4 mb-md-0">
@@ -254,17 +378,10 @@
           </div>
         </div>
       </div>
-
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         All rights reserved by Mandon company
       </div>
     </footer>
-    <!--  JS  -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-    ></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

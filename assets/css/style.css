@@ -1,24 +1,69 @@
+/* NORMALIZE */
 * {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .row {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
 }
+
 img {
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#cart {
+  height: 100%;
+  width: 200px;
+  background-color: #f3f3f3;
+  position: fixed !important;
+  color: black;
+  z-index: 999999;
+  overflow: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-icon {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  max-width: 6em;
+  height: 10vh;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #00aeef, #182f6e);
+  z-index: 999999999999;
+}
+
+.cart-icon:hover {
+  background: linear-gradient(to bottom right, #182f6e, #00aeef);
+}
+
+.modal-footer img {
+  width: 20px;
+  height: 20px;
+}
+.close span {
+  padding: 5px;
+}
+
 header {
   background-color: #efefef;
-
-  padding-top: 5px;
   width: 100%;
 }
 
@@ -42,177 +87,29 @@ header a {
   color: #182f6e;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 header img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
 }
 
 header div {
   text-align: center;
-  padding-bottom: 3px;
-  padding-top: 3px;
   background-color: #f41f35;
   color: white;
+  padding: 5px 0;
 }
 
-.banner {
-  background-color: white;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
+footer {
+  color: #878787 !important;
+  background-color: #182f6e;
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
-}
-
-.banner .description {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  text-align: center;
-  background-image: url(../img/banner-background.jpg);
-}
-
-.banner .description img {
-  width: 100px;
-  height: 100px;
-  display: block;
-  text-align: center;
-}
-
-.banner .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.description p {
-  color: white;
-}
-
-.description h2 {
-  color: white;
-}
-
-.description h6 {
-  color: white;
-}
-
-.banner .bluebox {
-  display: block;
-  opacity: 0.6;
-  width: 100%;
-  height: 13px;
-  background-color: #75b0bf;
-  position: relative;
-  top: -13px;
-  left: 0;
-  z-index: 99999;
-  margin-bottom: -13px;
-}
-
-.products {
-  margin-top: 10px;
-}
-.products .product {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
-}
-.products a {
-  color: #741c7c;
-  font-weight: 500;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  display: inline-block;
-  text-decoration: none;
-  position: relative;
-}
-.products a:hover {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-}
-.products a::before {
-  position: absolute;
-  top: -2px;
-  left: -7px;
-  box-sizing: content-box;
-  padding: 0 5px;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #741c7c;
-  content: "";
-  opacity: 0;
-  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
-  transition: opacity 0.2s, transform 0.2s;
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
-}
-.products a:hover::before {
-  opacity: 1;
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.contain {
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 100%;
-}
-
-.item {
-  align-items: center;
-  background-color: tomato;
-  color: white;
-  display: flex;
-  height: 300px;
-  justify-content: center;
-}
-
-.owl-carousel img {
-  max-height: 93vh !important;
-}
-
-.information {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.information .row {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 1em;
-}
-.information img {
-  width: 100%;
-  height: auto;
-}
-
-.information h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.information p {
-  margin-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.effect {
+.link {
   text-align: center;
   display: inline-block;
   position: relative;
@@ -226,16 +123,13 @@ header div {
   font-size: 20px;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.effect.effect-5 {
   transition: all 0.2s linear 0s;
   background: linear-gradient(#00aeef, #182f6e);
 }
-.effect.effect-5:before {
+
+.link:before {
   content: "\➜";
   color: red;
-  font-family: FontAwesome;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,75 +145,125 @@ header div {
   transform-origin: left center;
   transition: all 0.2s linear 0s;
 }
-.effect.effect-5:hover {
+
+.link:hover {
   text-indent: 30px;
   color: white;
 }
-.effect.effect-5:hover:before {
+
+.link:hover:before {
   transform: scale(1, 1);
   text-indent: 0;
 }
-.information h2 {
-  padding-left: 5px;
-}
 
-.information p {
-  padding-top: 1px;
-}
-
-footer {
-  color: #878787 !important;
-  background-color: #182f6e;
-}
-
-.face-banner {
+/* HOME PAGE */
+/* HOME PAGE */
+/* HOME PAGE */
+#homepage .banner {
+  background-color: white;
   position: relative;
-  color: #f0cdbd;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.face-banner .text {
-  position: absolute;
-  bottom: 20%;
-  left: 30px;
-  right: 70%;
-  color: #5e5e5e;
+#homepage .banner img {
+  max-height: 90vh;
+  min-height: 60vh;
 }
 
-.face-banner img {
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
+#homepage .description {
+  background-image: url(../img/banner-background.jpg);
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
-.face-banner .text h2 {
+#homepage .description img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
-.face-products {
-  margin-top: 50px;
-  margin-bottom: 50px;
+#homepage .products {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.face-products .card {
+#homepage .products .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
 }
 
-.face-products .bg {
+#homepage .information {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#homepage .information .col-lg-6 {
+  margin-top: 50px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* FACE PAGE */
+/* FACE PAGE */
+/* FACE PAGE */
+
+#facepage .banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 50vh;
+}
+
+#facepage .banner .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
+}
+
+#facepage .banner .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5%;
+  padding-top: 10%;
+  font-weight: bold;
+}
+
+#facepage .products {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+#facepage .products .card {
+  padding: 10px;
+  border: none;
+}
+
+#facepage .products .bg {
   background-image: url("../img/bg.png");
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.face-products h3,
-h4 {
-  text-align: center;
-}
 
-.card {
-  border: none;
-}
-
-.card button {
+.add-to-cart {
   border: none;
   background: linear-gradient(#00aeef, #182f6e);
   color: white;
@@ -328,95 +272,69 @@ h4 {
   transition: all 1s;
 }
 
-.card button:hover {
+.add-to-cart:hover {
   background: linear-gradient(to bottom right, #00aeef, white);
   color: #182f6e;
 }
-.how-to-use img {
-  display: block;
-  margin-top: 20px;
-}
 
-.how-to-use h4 {
-  text-align: center;
-}
-
-.how-to-use a {
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #64bcd3;
-}
-
-.how-to-use h2 {
-  text-align: center;
-}
-
-.how-to-use {
-  margin-top: 50px;
-  margin-bottom: 50px;
+#facepage .howto {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #f3f3f3;
-}
-.hair-banner {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #f3f3f3;
-}
-.hair-banner img {
-  width: 100%;
-  height: auto;
+  text-align: center;
 }
 
-.hair-banner h1 {
-  font-size: 40px;
-  margin-left: 20px;
-  color: #182f6e;
+#facepage .howto .col-lg-4 {
+  padding: 10px;
 }
 
-.hair-banner button {
-  margin-top: 20px;
-  margin-left: 20px;
-  border: none;
+#facepage .howto img[alt="read"] {
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* HAIR PAGE */
+/* HAIR PAGE */
+/* HAIR PAGE */
+
+#hairpage .banner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(21, 19, 68);
+}
+
+#hairpage .banner .text {
   color: white;
-
-  cursor: pointer;
-  background-color: #182f6e;
-  padding: 30px;
-  border-radius: 50px;
-  border-color: none;
-  outline: none;
-  border: none;
-  font-weight: bold;
-  text-transform: uppercase;
+  padding: 20px;
+  margin-top: 50px;
 }
 
-.hair-banner button:hover {
-  animation: pulse; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
-  background-color: #516db9;
+#hairpage .banner a {
+  padding: 10px 30px;
+  margin-top: 10px;
 }
 
-.hair-shop img {
-  max-height: 300px;
+#hairpage .products {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.hair-shop .card {
+#hairpage .product {
+  padding: 10px;
+}
+
+#hairpage .card {
   color: #182f6e;
   background-color: rgb(243, 249, 252);
   padding: 5px;
   cursor: pointer;
 }
 
-.card:hover .card > img {
-  transform: scale(1.7);
-  width: 50px;
-  height: 50px;
-}
-
-.card span {
+#hairpage .card span {
   color: white;
   padding: 2px;
   background-color: #182f6e;
@@ -427,137 +345,74 @@ h4 {
   width: 50px;
 }
 
-.hair-shop {
-  text-align: center;
+#hairpage .description {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.slider-hair img {
+#hairpage .description .col-lg-4 {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+#hairpage .owl-carousel img {
   padding: 20px;
   border-radius: 10%;
 }
 
-.hair-description {
-  padding-top: 50px;
-  padding-bottom: 50px;
+/* SHAVE PAGE */
+/* SHAVE PAGE */
+/* SHAVE PAGE */
+
+#shavepage .banner {
+  background-color: rgb(20, 26, 77);
+  color: white;
+  margin-bottom: 50px;
 }
 
-.hair-description h2 {
-  margin-top: 30px;
-}
-
-.hair-description p {
-  margin-top: 30px;
-  padding-right: 20px;
-}
-.shave-banner .centered {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  color: white;
-  width: 300px;
-  text-align: left;
-  z-index: 999;
-}
-.shave-banner {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.shave-banner h2 {
-  border: 1px solid white;
-  border-radius: 2px;
+#shavepage .banner .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-}
-.shave-banner .overlay1 {
-  width: 200px;
-  height: 100px;
-  margin-left: 200px;
-  opacity: 0.735;
-  background-color: #75b0bf;
+  text-align: right;
 }
 
-.shave-banner .overlay2 {
-  width: 200px;
-  height: 100px;
-  opacity: 0.735;
-  background-color: #75b0bf;
-  color: white;
+#shavepage .banner p {
   font-size: 20px;
 }
 
-.bestman {
+#shavepage .products {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #182f6e;
+  text-align: center;
+}
+
+#shavepage .products .card {
+  padding: 10px;
+  border: none;
+}
+
+#shavepage .description {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
   background-color: #f3f3f3;
-}
-.bestman h3 {
-  text-align: center;
+  color: #182f6e;
 }
 
-.bestman img {
+#shavepage .description img {
   width: 50px;
   height: 50px;
 }
 
-.bestman * {
+#shavepage .description * {
   margin-top: 20px;
 }
 
-.bestman {
-  color: #182f6e;
-}
-
-.shave-products h5 {
-  color: #182f6e;
-  margin-top: 10px;
-}
-.shave-products h3 {
-  color: #182f6e;
-}
-.shave-products p {
-  z-index: 1;
-  max-width: 410px;
-  margin: 0 auto 90px 0;
-  font-family: latoregular, arial, sans-serif;
-  letter-spacing: normal;
-  color: #5e5e5e;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.shave-products {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.shave-ddd h3 {
-  padding-top: 50px;
-  padding-left: 30px;
-  z-index: 1;
-  margin: 0 auto 20px 0;
-  font-family: lato_blackregular, arial, sans-serif;
-  font-size: 30px;
-  line-height: 34px;
-  letter-spacing: 1.5px;
-  color: #182f6e;
-  text-transform: uppercase;
-}
-
-.shave-ddd p {
-  padding-left: 30px;
-  z-index: 1;
-  max-width: 410px;
-  margin: 0 auto 90px 0;
-  font-family: latoregular, arial, sans-serif;
-  letter-spacing: normal;
-  color: #5e5e5e;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.comments {
+#shavepage .comments {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
@@ -565,119 +420,59 @@ h4 {
   padding-bottom: 50px;
 }
 
-.owl-nav button {
-  padding: 10px !important;
-  color: white !important;
-  background-color: #182f6e !important;
-  width: 20px !important;
-  height: 20px !important;
-  margin-left: 5px !important;
-  margin-right: 5px !important;
-}
-
-.perfume-banner {
-  padding-bottom: 50px;
-}
-
-.perfume-banner a {
-  margin-top: 20px;
-  margin-left: 20px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  background-color: #182f6e;
-  padding: 10px;
-  border-radius: 50px;
-  border-color: none;
-  outline: none;
-  border: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.perfume-banner a:hover {
-  animation: pulse;
-  animation-duration: 2s;
-  background-color: #516db9;
-}
-
-.perfume-products .card {
-  padding: 20px;
-  text-align: center;
-}
-
-.shave-banner .bluebox2 {
-  display: block;
-  opacity: 0.6;
-  width: 100%;
-  height: 14px;
-  background-color: #75b0bf;
-  position: relative;
-  top: -14px;
-  left: 0;
-  z-index: 999999;
-  margin-bottom: -14px;
-}
-
-.perfume-description {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.perfume-description .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.container h3 {
-  text-align: center;
-}
-
-#cart {
-  height: 100%;
-  width: 200px;
-  background-color: #f3f3f3;
-  position: fixed !important;
-  color: black;
-  z-index: 999999;
-  overflow: auto;
-  display: none;
-}
-
-.fixed-bottom-right {
-  position: fixed;
-  bottom: 90px;
-  right: 50px;
-  width: 30px;
-  height: 30px;
-  background-color: lightblue;
-  border-radius: 5px;
-}
-.fixed-bottom-right2 {
-  position: fixed;
-  border-radius: 5px;
-  bottom: 30px;
-  right: 50px;
-  width: 30px;
-  height: 30px;
-  background-color: lightcoral;
+.first {
+  background-image: linear-gradient(to bottom right, #00aeef, gray) !important;
 }
 
 .second {
   background-image: linear-gradient(to bottom right, yellow, gray) !important;
 }
 
-.first {
-  background-image: linear-gradient(to bottom right, #00aeef, gray) !important;
-}
 .third {
   background-image: linear-gradient(to bottom right, #5899b5, gray) !important;
 }
 
 .fourth {
   background-image: linear-gradient(to bottom right, #18213e, white) !important;
+}
+
+.owl-prev,
+.owl-next {
+  padding: 10px !important;
+  color: white !important;
+  background-color: #182f6e !important;
+  width: 50px !important;
+  height: 50px !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+/* PERFUME PAGE */
+/* PERFUME PAGE */
+/* PERFUME PAGE */
+
+#perfumepage .banner {
+  padding-bottom: 50px;
+}
+
+#perfumepage .banner .text {
+  background-color: rgb(226, 226, 226);
+  padding: 10px;
+  padding-top: 100px;
+  font-size: large;
+}
+
+#perfumepage .products {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#perfumepage .card {
+  border: none;
+  padding: 10px;
+  text-align: center;
+}
+
+#perfumepage .description {
+  padding-top: 50px;
 }

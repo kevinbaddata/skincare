@@ -23,16 +23,75 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="assets/css/style.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
+    <article>
+      <div id="cart">
+        <div class="container">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="cart_close()"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div>TOTAL: <span class="total-cart"></span> SEK</div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger clear-cart"
+                data-dismiss="modal"
+              >
+                <img
+                  src="assets/svg/clear.svg"
+                  alt="clear"
+                  width="20px"
+                  height="20px"
+                />
+                <span>Remove All</span>
+              </button>
+              <button type="button" class="btn btn-primary">
+                <span>Order Now</span>
+                <img
+                  src="assets/svg/order.svg"
+                  alt="order"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="cart-icon"
+        src="assets/svg/shopping-cart.svg"
+        alt="shop cart"
+        onclick="cart_open()"
+      />
+    </article>
+
+    <!-- HEADER -->
     <header>
       <ul>
-        <li><a href="face.html">ansiktet</a></li>
+        <li><a href="face.html">Ansiktet</a></li>
         <li><a href="hair.html">Hår</a></li>
         <li>
           <a href="index.html">
@@ -44,114 +103,102 @@
       </ul>
       <div>50% av på alla produkter</div>
     </header>
-    <section class="perfume-banner">
-      <div class="row">
-        <div class="col-lg-8 col-md-12">
-          <img
-            src="assets/img/web_site-2183356-png.png.ulenscale.767x307.png"
-            alt=""
-          />
-        </div>
 
-        <div class="col-lg-4 col-md-12">
-          <h3>Shoppa</h3>
-          <h5>dummy xhtdg</h5>
-          <a href="">Här</a>
-        </div>
-      </div>
-    </section>
-    <section class="perfume-products">
-      <div class="owl-carousel">
-        <div class="card">
-          <img src="https://picsum.photos/200/300" alt="" />
-          <h5>dummy data</h5>
-        </div>
-        <div class="card">
-          <img src="https://picsum.photos/200/300" alt="" />
-          <h5>dummy data</h5>
-        </div>
-        <div class="card">
-          <img src="https://picsum.photos/200/300" alt="" />
-          <h5>dummy data</h5>
-        </div>
-        <div class="card">
-          <img src="https://picsum.photos/200/300" alt="" />
-          <h5>dummy data</h5>
-        </div>
-        <div class="card">
-          <img src="https://picsum.photos/200/300" alt="" />
-          <h5>dummy data</h5>
-        </div>
-        <div class="card">
-          <img src="https://picsum.photos/200/300" alt="" />
-          <h5>dummy data</h5>
-        </div>
-        <div class="card">
-          <img src="https://picsum.photos/200/300" alt="" />
-          <h5>dummy data</h5>
-        </div>
-      </div>
-    </section>
-    <section class="perfume-description">
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <img src="assets/img/perfume-banner2.png" alt="" />
-        </div>
-        <div class="col-lg-6 col-md-12 text">
-          <h3>dummy data</h3>
-          <h5>dummy data</h5>
-          <a href="">dummy data</a>
-        </div>
-      </div>
-    </section>
-    <section class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-12">
-          <div class="card">
-            <img src="assets/img/perfume-1.jpg" alt="" />
-            <h3>dummy data</h3>
-            <button>Köp</button>
+    <main id="perfumepage">
+      <!-- BANNER -->
+      <section class="banner">
+        <div class="row">
+          <div class="col-lg-9 col-md-12">
+            <img
+              src="assets/img/web_site-2183356-png.png.ulenscale.767x307.png"
+              alt="perfume"
+            />
+          </div>
+
+          <div class="col-lg-3 col-md-12 text">
+            <h1>Parfym</h1>
+            <br />
+            <p>
+              Den femte känslan (luktsinne) är en kraftfull, varför dofterna du
+              bär kan vara en så avgörande funktion, och dofterna du luktar kan
+              ofta vara en viktig faktor när du bildar åsikter.
+            </p>
+            <p>
+              Dofter kan väcka starka känslor hos människor; en lukt som
+              omedelbart drar dig tillbaka till den förflutna tiden som gått med
+              dess nostalgihöjande egenskaper, eller kanske en tröstande doft
+              som påminner dig så starkt om en älskad, eller helt enkelt "lukten
+              av hem".
+            </p>
           </div>
         </div>
+      </section>
 
-        <div class="col-lg-4 col-md-12">
-          <div class="card">
-            <img src="assets/img/perfume-2.jpg" alt="" />
+      <!-- PRODUCTS -->
+      <section class="products container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 card">
+            <img src="assets/img/perfume-1.jpg" alt="perfume" />
             <h3>dummy data</h3>
-            <button>Köp</button>
+            <a
+              href="#"
+              data-name="perfume1"
+              data-price="100"
+              class="add-to-cart"
+              >KÖP</a
+            >
+          </div>
+
+          <div class="col-lg-4 col-md-12 card">
+            <img src="assets/img/perfume-2.jpg" alt="perfume" />
+            <h3>dummy data</h3>
+            <a
+              href="#"
+              data-name="perfume2"
+              data-price="100"
+              class="add-to-cart"
+              >KÖP</a
+            >
+          </div>
+
+          <div class="col-lg-4 col-md-12 card">
+            <img src="assets/img/medium_image.jpg" alt="perfume" />
+            <h3>dummy data</h3>
+            <a
+              href="#"
+              data-name="perfume3"
+              data-price="100"
+              class="add-to-cart"
+              >KÖP</a
+            >
           </div>
         </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="card">
-            <img src="assets/img/medium_image.jpg" alt="" />
-            <h3>dummy data</h3>
-            <button>Köp</button>
+      </section>
+
+      <!-- DESCRIPTION -->
+      <section class="description">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <img src="assets/img/perfume-banner2.png" alt="perfume" />
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <h3>Mandons Parfym</h3>
+            <p>
+              Mandon är först och främst en skapelse som hävdar sig själv.
+              Upptäck expertis och kreativitet hos Mandon
+            </p>
+            <br />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="container mb-5">
-      <div class="row">
-        <h3>dummy data</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
-          cumque facere enim quo explicabo, vitae voluptatibus iusto. Vel
-          laboriosam ab neque illo. Error quam quis perspiciatis reiciendis
-          ratione ipsam! Sapiente. Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Quibusdam repudiandae dolores laudantium porro optio
-          similique quia. Totam ad accusamus doloribus necessitatibus iure
-          quaerat facilis assumenda repudiandae, cum delectus pariatur
-          explicabo.
-        </p>
-      </div>
-    </section>
+    <!-- FOOTER -->
     <footer class="text-white text-center text-lg-start">
       <div class="container p-4">
         <div class="row">
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
             <h5 class="text-uppercase">Mandon</h5>
-
             <p>
               Mandon är din professionella hudvårdsklinik på nätet som inte
               erbjuder allt – bara det bästa för din hud. Vi har ett unikt,
@@ -162,10 +209,8 @@
               kategori.
             </p>
           </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-4">
             <h5 class="text-uppercase">Länkar</h5>
-
             <ul class="list-unstyled mb-0">
               <li>
                 <a href="face.html" class="text-white">Ansikts</a>
@@ -181,14 +226,10 @@
               </li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-0">Pren</h5>
-
             <div class="form-outline mb-4">
-              <label class="form-label" for="form5Example2"
-                >Via Whatsapp
-              </label>
+              <label class="form-label" for="form5Example2">Via Contact</label>
               <input type="email" id="form5Example2" class="form-control" />
             </div>
             <div class="col-auto mb-4 mb-md-0">
@@ -197,17 +238,10 @@
           </div>
         </div>
       </div>
-
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         All rights reserved by Mandon company
       </div>
     </footer>
-    <!--  JS  -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-    ></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

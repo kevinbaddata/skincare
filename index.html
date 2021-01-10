@@ -23,22 +23,19 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="assets/css/style.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <div id="cart">
-      <div
-        class="modal"
-        style="display: block"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-      >
-        <div class="modal-dialog modal-lg" role="document">
+    <article>
+      <div id="cart">
+        <div class="container">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
@@ -54,34 +51,47 @@
             </div>
             <div class="modal-body">
               <table class="show-cart table"></table>
-              <div>Total price: $<span class="total-cart"></span></div>
+              <div>TOTAL: <span class="total-cart"></span> SEK</div>
             </div>
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-danger clear-cart"
                 data-dismiss="modal"
-                onclick="cart_close()"
               >
-                Close
+                <img
+                  src="assets/svg/clear.svg"
+                  alt="clear"
+                  width="20px"
+                  height="20px"
+                />
+                <span>Remove All</span>
               </button>
-              <button type="button" class="btn btn-primary">Order now</button>
+              <button type="button" class="btn btn-primary">
+                <span>Order Now</span>
+                <img
+                  src="assets/svg/order.svg"
+                  alt="order"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="fixed-bottom-right" onclick="cart_open()">
-      <!-- <span class="total-count"></span> -->
-      <img src="assets/svg/shopping-cart.svg" alt="" />
-    </div>
-    <div class="clear-cart fixed-bottom-right2">
-      <img src="assets/svg/clear.svg" alt="" />
-    </div>
+      <img
+        class="cart-icon"
+        src="assets/svg/shopping-cart.svg"
+        alt="shop cart"
+        onclick="cart_open()"
+      />
+    </article>
 
+    <!-- HEADER -->
     <header>
       <ul>
-        <li><a href="face.html">ansiktet</a></li>
+        <li><a href="face.html">Ansiktet</a></li>
         <li><a href="hair.html">Hår</a></li>
         <li>
           <a href="index.html">
@@ -93,152 +103,166 @@
       </ul>
       <div>50% av på alla produkter</div>
     </header>
-    <section class="banner">
-      <div class="slider">
+
+    <main id="homepage">
+      <!-- BANNER -->
+      <section class="banner">
         <div class="owl-carousel">
           <img src="assets/img/slider1.png" alt="menfacecare" />
           <img src="assets/img/slider2.jpg" alt="menfacecare" />
           <img src="assets/img/slider4.png" alt="menfacecare" />
         </div>
-      </div>
-      <div class="bluebox"></div>
-      <div class="description">
-        <div class="row">
-          <img
-            src="assets/svg/logo.svg"
-            alt="Mandon Logo"
-            width="50px"
-            height="50px"
-          />
-          <h6>Take care, be safe</h6>
-          <h2>Skin care</h2>
-          <a
-            href="#"
-            data-name="Orange"
-            data-price="0.5"
-            class="add-to-cart btn btn-primary"
-            >Add to cart</a
-          >
-          <p>
-            Det finns förtroende för vacker hud. Det är därför vårt
-            hudvårdssortiment ger överlägsen vård för att förvandla din rutin
-            till ett nöje.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="products">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12 product">
-            <img src="https://picsum.photos/200/300" alt="" />
-            <h3>Ansiktet</h3>
-            <p>Clicka för att se våra huvudvårdsprdukter</p>
-            <a href="face.html">Gå till ansiktssidan </a>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 product">
-            <img src="https://picsum.photos/200/300" alt="" />
-            <h3>Hår Produkter</h3>
-            <p>Clicka för att se våra hårsprodukter</p>
-            <a href="hair.html">Gå till hår sidan</a>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 product">
-            <img src="https://picsum.photos/200/300" alt="" />
-            <h3>Rakning</h3>
-            <p>Clicka för att se våra Rak produkter</p>
-            <a href="shave.html">Gå till den här sidan</a>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-12 product">
-            <img src="https://picsum.photos/200/300" alt="" />
-            <h3>Parfym</h3>
-            <p>Våra Parfym produkter</p>
-            <a href="perfume.html">Gå till våra Parfym produkter</a>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="information container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <h2>Face Skin care</h2>
-          <p>
-            Genom en bra hudvårdsrutin lägger du grunden för en frisk och sund
-            hud. Med rätt produkter mår huden bättre och många skönhetsproblem
-            såsom torr hud, finnar och fina linjer kan förbättras. För att få
-            den effekt du är ute efter är det viktig att de väljer rätt
-            produkter för just din hudtyp.
-          </p>
-          <a class="effect effect-5" href="face.html">Press for more info</a>
+      <!-- DESCRIPTION -->
+      <section class="description row">
+        <img
+          src="assets/svg/logo.svg"
+          alt="Mandon Logo"
+          width="50px"
+          height="50px"
+        />
+        <h2>MANDON</h2>
+        <h6>Take care, be safe</h6>
+        <p>
+          Det finns förtroende för vacker hud. Det är därför vårt
+          hudvårdssortiment ger överlägsen vård för att förvandla din rutin till
+          ett nöje.
+        </p>
+        <a
+          href="#"
+          data-name="Orange"
+          data-price="0.5"
+          class="add-to-cart btn btn-primary"
+          >Add to cart</a
+        >
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="products">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 product">
+              <img
+                src="assets/img/best-face-cream-for-men-1.jpg"
+                alt="Ansiktet"
+              />
+              <h3>Ansiktet</h3>
+              <p>Clicka för att se våra huvudvårdsprdukter</p>
+              <a class="link" style="padding: 5px" href="face.html">gå till</a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 product">
+              <img src="assets/img/mens-shampoo.jpg" alt="Hår Produkter" />
+              <h3>Hår Produkter</h3>
+              <p>Clicka för att se våra hårsprodukter</p>
+              <a class="link" style="padding: 5px" href="hair.html">gå till</a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 product">
+              <img src="assets/img/shave-to-shave-page.png" alt="Rakning" />
+              <h3>Rakning</h3>
+              <p>Clicka för att se våra Rak produkter</p>
+              <a class="link" style="padding: 5px" href="shave.html">gå till</a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 product">
+              <img
+                src="assets/img/55e9bc7f14000077002e4f68.jpeg"
+                alt="Parfym"
+              />
+              <h3>Parfym</h3>
+              <p>Våra Parfym produkter</p>
+              <a class="link" style="padding: 5px" href="perfume.html"
+                >gå till</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6 col-md-12">
-          <img src="assets/img/faceskincare.jpeg" alt="faceskincare" />
+      </section>
+
+      <!-- INFORMATION -->
+      <section class="information container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <h2>Face Skin care</h2>
+            <p>
+              Genom en bra hudvårdsrutin lägger du grunden för en frisk och sund
+              hud. Med rätt produkter mår huden bättre och många skönhetsproblem
+              såsom torr hud, finnar och fina linjer kan förbättras. För att få
+              den effekt du är ute efter är det viktig att de väljer rätt
+              produkter för just din hudtyp.
+            </p>
+            <a class="link" href="face.html">Press for more info</a>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <img src="assets/img/faceskincare.jpeg" alt="faceskincare" />
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <img
-            src="assets/img/Razors_ProGlideShield_Roll__96098.1593378711-removebg-preview.png"
-            alt=""
-          />
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <img
+              src="assets/img/Razors_ProGlideShield_Roll__96098.1593378711-removebg-preview.png"
+              alt="razor"
+            />
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <h2>Ha koll på det här när du rakar dig</h2>
+            <p>
+              Håll dig smidig med våran rakaparat ProGlide Shield.
+              Bladpåfyllning för ProGlide Shield smörjer före och efter knivarna
+              för att förhindra irritation. Microfins hjälper till att sträcka
+              och släta huden medan mikrokamben styr ditt hår mot bladet, vilket
+              ger dig den närmaste rakningen.
+            </p>
+            <a class="link" href="shave.html">Press for more info</a>
+          </div>
         </div>
-        <div class="col-lg-6 col-md-12">
-          <h2>Ha koll på det här när du rakar dig</h2>
-          <p>
-            Håll dig smidig med våran rakaparat ProGlide Shield. Bladpåfyllning
-            för ProGlide Shield smörjer före och efter knivarna för att
-            förhindra irritation. Microfins hjälper till att sträcka och släta
-            huden medan mikrokamben styr ditt hår mot bladet, vilket ger dig den
-            närmaste rakningen.
-          </p>
-          <a class="effect effect-5" href="shave.html">Press for more info</a>
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <h2>Hår Produkter</h2>
+            <p>
+              Oavsett om du har mycket eller lite hår, tjock eller tunt, om du
+              har mest hår på huvudet eller i ansiktet i form av skägg och
+              mustasch krävs det omvårdnad för att se snyggt ut och hålla sig
+              fräscht. Det räcker inte med ett schampo och en kam för att få
+              till den rätta trendiga looken. Gents har produkterna för alla
+              hårtyper!
+            </p>
+            <a class="link" href="hair.html">Press for more info</a>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <img
+              src="assets/img/hairstyles_ideas_for_men-removebg-preview.png"
+              alt="hair"
+            />
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <h2>Hår Produkter</h2>
-          <p>
-            Oavsett om du har mycket eller lite hår, tjock eller tunt, om du har
-            mest hår på huvudet eller i ansiktet i form av skägg och mustasch
-            krävs det omvårdnad för att se snyggt ut och hålla sig fräscht. Det
-            räcker inte med ett schampo och en kam för att få till den rätta
-            trendiga looken. Gents har produkterna för alla hårtyper!
-          </p>
-          <a class="effect effect-5" href="hair.html">Press for more info</a>
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <img
+              src="assets/img/medium_image.jpg"
+              alt="perfume"
+              style="max-height: 500px"
+            />
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <h2>Parfymerna</h2>
+            <p>
+              Ute efter herrparfym? Parfymerna vi gillar skiljer sig från person
+              till person och olika doftkombinationer väcker olika känslor hos
+              oss. För herrdofter är svaret dock oftast detsamma: en självsäker
+              herrdoft med ett välrundat dofthjärta och en varm, stadig bas.
+            </p>
+            <a class="link" href="perfume.html">Press for more info</a>
+          </div>
         </div>
-        <div class="col-lg-6 col-md-12">
-          <img
-            src="assets/img/hairstyles_ideas_for_men-removebg-preview.png"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <img
-            src="assets/img/medium_image.jpg"
-            alt=""
-            style="max-height: 350px"
-          />
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <h2>Parfymerna</h2>
-          <p>
-            Ute efter herrparfym? Parfymerna vi gillar skiljer sig från person
-            till person och olika doftkombinationer väcker olika känslor hos
-            oss. För herrdofter är svaret dock oftast detsamma: en självsäker
-            herrdoft med ett välrundat dofthjärta och en varm, stadig bas.
-          </p>
-          <a class="effect effect-5" href="perfume.html">Press for more info</a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer class="text-white text-center text-lg-start">
       <div class="container p-4">
         <div class="row">
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
             <h5 class="text-uppercase">Mandon</h5>
-
             <p>
               Mandon är din professionella hudvårdsklinik på nätet som inte
               erbjuder allt – bara det bästa för din hud. Vi har ett unikt,
@@ -249,10 +273,8 @@
               kategori.
             </p>
           </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-4">
             <h5 class="text-uppercase">Länkar</h5>
-
             <ul class="list-unstyled mb-0">
               <li>
                 <a href="face.html" class="text-white">Ansikts</a>
@@ -268,14 +290,10 @@
               </li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-0">Pren</h5>
-
             <div class="form-outline mb-4">
-              <label class="form-label" for="form5Example2"
-                >Via Whatsapp
-              </label>
+              <label class="form-label" for="form5Example2">Via Contact</label>
               <input type="email" id="form5Example2" class="form-control" />
             </div>
             <div class="col-auto mb-4 mb-md-0">
@@ -284,17 +302,10 @@
           </div>
         </div>
       </div>
-
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         All rights reserved by Mandon company
       </div>
     </footer>
-    <!--  JS  -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-    ></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

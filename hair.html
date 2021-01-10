@@ -23,20 +23,75 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
+    <article>
+      <div id="cart">
+        <div class="container">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="cart_close()"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div>TOTAL: <span class="total-cart"></span> SEK</div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger clear-cart"
+                data-dismiss="modal"
+              >
+                <img
+                  src="assets/svg/clear.svg"
+                  alt="clear"
+                  width="20px"
+                  height="20px"
+                />
+                <span>Remove All</span>
+              </button>
+              <button type="button" class="btn btn-primary">
+                <span>Order Now</span>
+                <img
+                  src="assets/svg/order.svg"
+                  alt="order"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="cart-icon"
+        src="assets/svg/shopping-cart.svg"
+        alt="shop cart"
+        onclick="cart_open()"
+      />
+    </article>
+
+    <!-- HEADER -->
     <header>
       <ul>
-        <li><a href="face.html">ansiktet</a></li>
+        <li><a href="face.html">Ansiktet</a></li>
         <li><a href="hair.html">Hår</a></li>
         <li>
           <a href="index.html">
@@ -48,93 +103,143 @@
       </ul>
       <div>50% av på alla produkter</div>
     </header>
-    <section class="hair-banner">
-      <div class="row">
-        <div class="col-lg-4 col-md-12">
-          <h1>
-            <b>TA DITT HÅR SPEL UPP 100% MED HUVUD och SKULDER </b>
-          </h1>
-          <button>Handla Nu</button>
-        </div>
-        <div class="col-lg-8 col-md-12">
-          <img
-            src="assets/img/NIVEA-MEN_Web-Banner_Shampoo_Header.jpg"
-            alt=""
-          />
-        </div>
-      </div>
-    </section>
-    <section class="hair-shop">
-      <h2>VÅRA SAMLINGAR</h2>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card">
-            <span>NEW</span>
-            <img src="assets/img/hair-card-item.png" alt="" />
-            <h5>Varjedag</h5>
-            <p>Daily anti-dandruff and hair care</p>
+
+    <main id="hairpage">
+      <!-- BANNER -->
+      <section class="banner">
+        <div class="row">
+          <div class="col-lg-3 col-md-12 text">
+            <h1>TA DITT HÅR SPEL UPP 100% MED HUVUD OCH SKULDER</h1>
+            <p>Klicka för att see våra hårsprodukter</p>
+            <a href="#hair-products" class="link">Klicka Här</a>
+          </div>
+          <div class="col-lg-9 col-md-12">
+            <img
+              src="assets/img/NIVEA-MEN_Web-Banner_Shampoo_Header.jpg"
+              alt="shampoo"
+            />
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card">
-            <span>NEW</span>
-            <img src="assets/img/hair-card-item.png" alt="" />
-            <h5>EVERYDAY</h5>
-            <p>Daily anti-dandruff and hair care</p>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section id="hair-products" class="container products">
+        <h2>VÅRA SAMLINGAR</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12 product">
+            <div class="card">
+              <span>NEW</span>
+              <img src="assets/img/hair-card-item.png" alt="shampoo one" />
+              <h5>Varjedag</h5>
+              <button
+                data-name="shampoo one"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 product">
+            <div class="card">
+              <span>NEW</span>
+              <img src="assets/img/hair-card-item.png" alt="shampoo" />
+              <h5>EVERYDAY</h5>
+              <button
+                data-name="shampoo two"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 product">
+            <div class="card">
+              <span>NEW</span>
+              <img src="assets/img/hair-card-item.png" alt="shampoo" />
+              <h5>EVERYDAY</h5>
+              <button
+                data-name="shampoo three"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 product">
+            <div class="card">
+              <span>NEW</span>
+              <img src="assets/img/hair-card-item.png" alt="shampoo" />
+              <h5>EVERYDAY</h5>
+              <button
+                data-name="shampoo four"
+                data-price="150"
+                class="add-to-cart"
+              >
+                KÖP
+              </button>
+            </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card">
-            <span>NEW</span>
-            <img src="assets/img/hair-card-item.png" alt="" />
-            <h5>EVERYDAY</h5>
-            <p>Daily anti-dandruff and hair care</p>
+      </section>
+
+      <!-- DESCRIPTION -->
+      <section class="description">
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <img src="assets/img/erkek-sampuanlari-mobil.jpg" alt="shampoo" />
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h2>Lär dig mer om ditt hår</h2>
+            <br />
+            <p>
+              Vårt uppdrag är att befria världen från mjäll - för vi tror att
+              ingenting ska hindra dig från att känna dig trygg och njuta av
+              livet till fullo.
+            </p>
+            <p>
+              Vi baserar allt vi gör på att se till att du har en säker och
+              trevlig upplevelse när du använder en av våra produkter. Vi är
+              fast beslutna att vara transparenta och vi är glada att kunna
+              berätta exakt vad som går i varje flaska. Det är viktigt att veta
+              att varje formel skapas med tanke på dig. Varje ingrediens som
+              ingår i våra produkter har klarat våra stränga säkerhetstester och
+              ingår för att hjälpa dig att bli av med mjäll medan du tar hand om
+              ditt hår och hårbotten.
+            </p>
+            <p>
+              Vi förstår också att en storlek inte passar alla när det gäller
+              vård av hår och hårbotten. Det är därför vi har tagit vårt
+              klassiska schampo mot mjäll och skapat ett komplett sortiment som
+              ger dig en mängd olika produkter skräddarsydda efter din hårtyp
+              och de specifika fördelarna du vill ha med ditt schampo.
+            </p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card">
-            <span>NEW</span>
-            <img src="assets/img/hair-card-item.png" alt="" />
-            <h5>EVERYDAY</h5>
-            <p>Daily anti-dandruff and hair care</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Slider Hair -->
-    <section class="slider-hair">
-      <div class="owl-carousel">
+      </section>
+      <!-- https://headandshoulders.com/en-us/ -->
+      <!-- https://headandshoulders.com/en-us/ -->
+      <!-- https://headandshoulders.com/en-us/ -->
+
+      <!-- SLIDER-->
+      <section class="owl-carousel">
         <img src="https://picsum.photos/200/300" alt="menfacecare" />
         <img src="https://picsum.photos/200/300" alt="menfacecare" />
         <img src="https://picsum.photos/200/300" alt="menfacecare" />
         <img src="https://picsum.photos/200/300" alt="menfacecare" />
         <img src="https://picsum.photos/200/300" alt="menfacecare" />
         <img src="https://picsum.photos/200/300" alt="menfacecare" />
-      </div>
-    </section>
-    <section class="hair-description">
-      <div class="row">
-        <div class="col-lg-8 col-md-12">
-          <img src="assets/img/erkek-sampuanlari-mobil.jpg" alt="" />
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <h2>Fill it later</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
-            fuga fugit atque ad vitae odio sapiente consectetur culpa aperiam
-            accusantium. Provident fugit, alias cupiditate sit quaerat velit
-            accusantium reiciendis minus.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Footer -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer class="text-white text-center text-lg-start">
       <div class="container p-4">
         <div class="row">
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
             <h5 class="text-uppercase">Mandon</h5>
-
             <p>
               Mandon är din professionella hudvårdsklinik på nätet som inte
               erbjuder allt – bara det bästa för din hud. Vi har ett unikt,
@@ -145,10 +250,8 @@
               kategori.
             </p>
           </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-4">
             <h5 class="text-uppercase">Länkar</h5>
-
             <ul class="list-unstyled mb-0">
               <li>
                 <a href="face.html" class="text-white">Ansikts</a>
@@ -164,14 +267,10 @@
               </li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-0">Pren</h5>
-
             <div class="form-outline mb-4">
-              <label class="form-label" for="form5Example2"
-                >Via Whatsapp
-              </label>
+              <label class="form-label" for="form5Example2">Via Contact</label>
               <input type="email" id="form5Example2" class="form-control" />
             </div>
             <div class="col-auto mb-4 mb-md-0">
@@ -180,17 +279,10 @@
           </div>
         </div>
       </div>
-
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         All rights reserved by Mandon company
       </div>
     </footer>
-    <!--  JS  -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-    ></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

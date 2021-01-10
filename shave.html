@@ -23,16 +23,75 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="assets/css/style.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
+    <article>
+      <div id="cart">
+        <div class="container">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onclick="cart_close()"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div>TOTAL: <span class="total-cart"></span> SEK</div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger clear-cart"
+                data-dismiss="modal"
+              >
+                <img
+                  src="assets/svg/clear.svg"
+                  alt="clear"
+                  width="20px"
+                  height="20px"
+                />
+                <span>Remove All</span>
+              </button>
+              <button type="button" class="btn btn-primary">
+                <span>Order Now</span>
+                <img
+                  src="assets/svg/order.svg"
+                  alt="order"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="cart-icon"
+        src="assets/svg/shopping-cart.svg"
+        alt="shop cart"
+        onclick="cart_open()"
+      />
+    </article>
+
+    <!-- HEADER -->
     <header>
       <ul>
-        <li><a href="face.html">ansiktet</a></li>
+        <li><a href="face.html">Ansiktet</a></li>
         <li><a href="hair.html">Hår</a></li>
         <li>
           <a href="index.html">
@@ -44,168 +103,193 @@
       </ul>
       <div>50% av på alla produkter</div>
     </header>
-    <section class="shave-banner">
-      <img src="assets/img/razor.png" alt="" />
-      <div class="bluebox2"></div>
 
-      <div class="centered">
-        <div>
-          <h2>Hitta det som funkar bäst för dig</h2>
+    <main id="shavepage">
+      <!-- BANNER -->
+      <section class="banner">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 text">
+            <h1>Hitta det som funkar bäst för dig</h1>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              labore fuga dicta quod repudiandae quas earum voluptas! Nobis, ad
+              perspiciatis in error voluptatem provident, architecto deserunt
+              ratione pariatur expedita officia.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              labore fuga dicta quod repudiandae quas earum voluptas! Nobis, ad
+              perspiciatis in error voluptatem provident, architecto deserunt
+              ratione pariatur expedita officia.
+            </p>
+          </div>
+          <div class="col-lg-8 col-md-12">
+            <img src="assets/img/razor.png" alt="razor" />
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- Products -->
-    <div class="shave-ddd">
-      <h3>Rakhyvlar</h3>
-      <p>
-        Mandons portfölj av rakhyvlar, blad och trimmare är utformad med den
-        mest avancerade tekniken för en bekväm rakning. Från en rak rakkniv till
-        tre blad till våra avancerade rakknivar med fem blad, en fantastisk
-        rakning ligger inom ditt grepp.
-      </p>
-    </div>
-    <section class="shave-products">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card">
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="products">
+        <h2>Rakhyvlar</h2>
+        <marquee>
+          Mandons portfölj av rakhyvlar, blad och trimmare är utformad med den
+          mest avancerade tekniken för en bekväm rakning. Från en rak rakkniv
+          till tre blad till våra avancerade rakknivar med fem blad, en
+          fantastisk rakning ligger inom ditt grepp.
+        </marquee>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+              <img
+                src="assets/img/Blades_ProGlide_2x-removebg-preview.png"
+                alt="ProGlide"
+              />
+              <h5>ProGlide</h5>
+              <h6>100Kr</h6>
+              <button
+                data-name="ProGlide"
+                data-price="100"
+                class="add-to-cart first"
+              >
+                KÖP
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+              <img src="assets/img/gillete2.png" alt="ProGlide" />
+              <h5>ProGlide Shield</h5>
+              <h6>100Kr</h6>
+              <button
+                data-name="ProGlide Shield"
+                data-price="100"
+                class="add-to-cart second"
+              >
+                KÖP
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+              <img
+                src="assets/img/Blades_Mach3_2x-removebg-preview.png"
+                alt="Mach 3"
+              />
+              <h5>Mach 3</h5>
+              <h6>100Kr</h6>
+              <button
+                data-name="Mach 3"
+                data-price="100"
+                class="add-to-cart third"
+              >
+                KÖP
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+              <img
+                src="assets/img/Blades_SkinGuard_2x-removebg-preview.png"
+                alt="Skin Guard"
+              />
+              <h5>Skin Guard</h5>
+              <h6>100Kr</h6>
+              <button
+                data-name="Skin Guard"
+                data-price="100"
+                class="add-to-cart fourth"
+              >
+                KÖP
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEST MAN -->
+      <section class="description container">
+        <h3>Det bästa en man kan få</h3>
+        <div class="row">
+          <div class="col-lg-4 col-md-12">
             <img
-              src="assets/img/Blades_ProGlide_2x-removebg-preview.png"
-              alt=""
+              src="assets/svg/razor.svg"
+              alt="INNOVATION"
+              width="50px"
+              height="50px"
             />
-            <h5>ProGlide</h5>
-            <h6>100Kr</h6>
-            <button
-              data-name="ProGlide"
-              data-price="100"
-              class="add-to-cart first"
-            >
-              KÖP
-            </button>
+            <h5>INNOVATION</h5>
+            <p>
+              Vi har tillverkat rakhyvlar sedan 2005 och anpassat våra
+              konstruktioner i takt med att tekniken har utvecklats på vägen.
+            </p>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card">
-            <img src="assets/img/gillete2.png" alt="" />
-            <h5>ProGlide Shield</h5>
-            <h6>100Kr</h6>
-            <button
-              data-name="ProGlide Shield"
-              data-price="100"
-              class="add-to-cart second"
-            >
-              KÖP
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card">
-            <img src="assets/img/Blades_Mach3_2x-removebg-preview.png" alt="" />
-            <h5>Mach 3</h5>
-            <h6>100Kr</h6>
-            <button
-              data-name="Mach 3"
-              data-price="100"
-              class="add-to-cart third"
-            >
-              KÖP
-            </button>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          <div class="card">
+          <div class="col-lg-4 col-md-12">
             <img
-              src="assets/img/Blades_SkinGuard_2x-removebg-preview.png"
-              alt=""
+              src="assets/svg/expert.svg"
+              alt="EXPERTRÅD"
+              width="50px"
+              height="50px"
             />
-            <h5>Skin Guard</h5>
-            <h6>100Kr</h6>
-            <button
-              data-name="Skin Guard"
-              data-price="100"
-              class="add-to-cart fourth"
-            >
-              KÖP
-            </button>
+            <h5>EXPERTRÅD</h5>
+            <p>
+              Ingen känner till grooming bättre än vi. Vårt
+              online-rådgivarverktyg levererar anpassade stylingtips och
+              produktrekommendationer.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <img
+              src="assets/svg/box.svg"
+              alt="PRENUMERERA"
+              width="50px"
+              height="50px"
+            />
+            <h5>PRENUMERERA & SPARA</h5>
+            <p>
+              Njut av flexibla rakplaner som du kan avbryta när som helst - utan
+              några strängar. Dessutom får du var fjärde beställning gratis.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Best Man -->
-    <section class="bestman container">
-      <h3>Det bästa en man kan få</h3>
-      <div class="row">
-        <div class="col-lg-4 col-md-12">
-          <img src="assets/svg/razor.svg" alt="" />
-          <h5>INNOVATION</h5>
-          <p>
-            We’ve been making razors since 1905, adapting our designs as
-            technology has advanced along the way.
-          </p>
+      </section>
+
+      <!-- COMMENTS -->
+      <section class="comments">
+        <div class="owl-carousel">
+          <div>
+            <h3>Fredrik</h3>
+            <p>
+              Efter att ha lidit i många år med alla slags rakhyvlar som riktar
+              sig till kvinnor har jag äntligen hittat en som inte irriterar min
+              hud. För mig är det den bästa rakhyveln som finns där och lämnar
+              min hud silkeslen. Rakhyvlar för män hela tiden från och med nu.
+            </p>
+            <h6>5/5</h6>
+          </div>
+          <div>
+            <h3>Carl</h3>
+            <p>
+              En av de bästa jag har använt riktigt bra rakning, lätt och slät
+              på huden
+            </p>
+            <h6>5/5</h6>
+          </div>
+          <div>
+            <h3>Peter</h3>
+            <p>
+              Jag tycker att detta ger en bra rakning och håller lite längre än
+              de flesta engångsblad.
+            </p>
+            <h6>4.5/5</h6>
+          </div>
         </div>
-        <div class="col-lg-4 col-md-12">
-          <img src="assets/svg/expert.svg" alt="" />
-          <h5>EXPERTRÅD</h5>
-          <p>
-            Ingen känner till grooming bättre än vi. Vårt online-rådgivarverktyg
-            levererar anpassade stylingtips och produktrekommendationer.
-          </p>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <img src="assets/svg/box.svg" alt="" />
-          <h5>PRENUMERERA & SPARA</h5>
-          <p>
-            Njut av flexibla rakplaner som du kan avbryta när som helst - utan
-            några strängar. Dessutom får du var fjärde beställning gratis.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- comments -->
-    <section class="comments container-lg">
-      <div class="owl-carousel">
-        <div>
-          <h3>FIll</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos amet
-            officiis, illo, quos et quisquam reiciendis voluptates nulla iusto
-            odio necessitatibus, distinctio fuga eum qui consequuntur vel
-            consectetur sit ducimus.
-          </p>
-          <h6>fill it later</h6>
-        </div>
-        <div>
-          <h3>FIll</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos amet
-            officiis, illo, quos et quisquam reiciendis voluptates nulla iusto
-            odio necessitatibus, distinctio fuga eum qui consequuntur vel
-            consectetur sit ducimus.
-          </p>
-          <h6>fill it later</h6>
-        </div>
-        <div>
-          <h3>FIll</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos amet
-            officiis, illo, quos et quisquam reiciendis voluptates nulla iusto
-            odio necessitatibus, distinctio fuga eum qui consequuntur vel
-            consectetur sit ducimus.
-          </p>
-          <h6>fill it later</h6>
-        </div>
-        <div>
-          <h3>FIll</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos amet
-            officiis, illo, quos et quisquam reiciendis voluptates nulla iusto
-            odio necessitatibus, distinctio fuga eum qui consequuntur vel
-            consectetur sit ducimus.
-          </p>
-          <h6>fill it later</h6>
-        </div>
-      </div>
-    </section>
-    <!-- Footer -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
     <footer class="text-white text-center text-lg-start">
       <div class="container p-4">
         <div class="row">
@@ -221,10 +305,8 @@
               kategori.
             </p>
           </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0 px-4">
             <h5 class="text-uppercase">Länkar</h5>
-
             <ul class="list-unstyled mb-0">
               <li>
                 <a href="face.html" class="text-white">Ansikts</a>
@@ -240,14 +322,10 @@
               </li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-0">Pren</h5>
-
             <div class="form-outline mb-4">
-              <label class="form-label" for="form5Example2"
-                >Via Whatsapp
-              </label>
+              <label class="form-label" for="form5Example2">Via Contact</label>
               <input type="email" id="form5Example2" class="form-control" />
             </div>
             <div class="col-auto mb-4 mb-md-0">
@@ -256,17 +334,10 @@
           </div>
         </div>
       </div>
-
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         All rights reserved by Mandon company
       </div>
     </footer>
-    <!--  JS  -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-    ></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

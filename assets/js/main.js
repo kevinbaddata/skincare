@@ -1,13 +1,11 @@
-$(".slider .owl-carousel").owlCarousel({
+$("#homepage .owl-carousel").owlCarousel({
   autoplay: true,
   lazyLoad: true,
   rewind: true,
   responsiveClass: true,
   autoHeight: true,
-  autoplayTimeout: 4000,
-  smartSpeed: 735,
+ 
   dots: false,
-  maxHeight: 80,
   responsive: {
     0: {
       items: 1,
@@ -27,14 +25,14 @@ $(".slider .owl-carousel").owlCarousel({
   },
 });
 
-$(".slider-hair .owl-carousel").owlCarousel({
+$("#hairpage .owl-carousel").owlCarousel({
   autoplay: true,
   lazyLoad: true,
   rewind: true,
   responsiveClass: true,
   autoHeight: true,
-  autoplayTimeout: 4000,
-  smartSpeed: 735,
+  autoplayTimeout: 2000,
+  smartSpeed: 10000,
   dots: false,
   maxHeight: 80,
   responsive: {
@@ -86,46 +84,12 @@ $(".comments  .owl-carousel").owlCarousel({
   },
 });
 
-
-$(".perfume-products  .owl-carousel").owlCarousel({
-  autoplay: true,
-  lazyLoad: true,
-  rewind: true,
-  responsiveClass: true,
-  autoHeight: true,
-  autoplayTimeout: 4000,
-  smartSpeed: 2735,
-  dots: false,
-  nav: false,
-  dotsEach: false,
-  maxHeight: 80,
-  responsive: {
-    0: {
-      items: 1,
-    },
-
-    600: {
-      items: 3,
-    },
-
-    1024: {
-      items: 5,
-    },
-
-    1366: {
-      items: 7,
-    },
-  },
-});
-
 function cart_open() {
   document.getElementById("cart").style.width = "100%";
-  document.getElementById("cart").style.display = "block";
-  }
+  document.getElementById("cart").style.display = "flex";
+}
 function cart_close() {
   document.getElementById("cart").style.display = "none";
-
-  
 }
 
 var shoppingCart = (function () {
@@ -300,9 +264,9 @@ function displayCart() {
       "<button class='plus-item btn btn-primary input-group-addon' data-name=" +
       cartArray[i].name +
       ">+</button></div></td>" +
-      "<td><button class='delete-item btn btn-danger' data-name=" +
+      "<td><button class='delete-item btn btn-danger bg-danger px-4' data-name=" +
       cartArray[i].name +
-      ">X</button></td>" +
+      ">Remove</button></td>" +
       " = " +
       "<td>" +
       cartArray[i].total +
