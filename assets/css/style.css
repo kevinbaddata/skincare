@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+html,
+body {
+  background-color: #efefef;
+}
+
 .row {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
@@ -22,6 +27,24 @@ ol,
 ul {
   margin: 0;
   padding: 0;
+}
+
+.banner .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: right;
+}
+
+.banner p {
+  font-size: 1.5em;
+}
+
+.banner h1 {
+  font-size: 5em;
+  text-transform: uppercase;
 }
 
 #cart {
@@ -172,7 +195,7 @@ footer {
 }
 
 #homepage .description {
-  background-image: url(../img/banner-background.jpg);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   color: white;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -218,30 +241,17 @@ footer {
 /* FACE PAGE */
 
 #facepage .banner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 50vh;
+  padding-bottom: 50px;
 }
 
-#facepage .banner .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat !important;
-  background-size: 100% auto !important;
-}
-
-#facepage .banner .text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 5%;
-  padding-top: 10%;
+#facepage .banner h1 {
+  font-size: 70px;
   font-weight: bold;
+}
+
+#facepage .banner p {
+  font-size: 40px;
+  margin-top: 40px;
 }
 
 #facepage .products {
@@ -255,12 +265,23 @@ footer {
   border: none;
 }
 
+#facepage .products img {
+  width: 50%;
+  height: 50%;
+  filter: drop-shadow(16px 16px 10px black);
+}
+
 #facepage .products .bg {
-  background-image: url("../img/bg.png");
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 30px;
+}
+
+#facepage .howto p {
+  text-align: justify;
 }
 
 .add-to-cart {
@@ -301,7 +322,6 @@ footer {
 /* HAIR PAGE */
 
 #hairpage .banner {
-  padding-top: 50px;
   padding-bottom: 50px;
   background-color: rgb(21, 19, 68);
 }
@@ -331,7 +351,6 @@ footer {
   color: #182f6e;
   background-color: rgb(243, 249, 252);
   padding: 5px;
-  cursor: pointer;
 }
 
 #hairpage .card span {
@@ -346,18 +365,35 @@ footer {
 }
 
 #hairpage .description {
+  background: linear-gradient(179deg, rgb(216, 234, 236) 0%, rgb(168, 146, 172) 95%);
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-#hairpage .description .col-lg-4 {
-  margin-top: 30px;
-  padding: 20px;
+#hairpage .description img {
+  width: 70%;
+  height: auto;
 }
 
 #hairpage .owl-carousel img {
   padding: 20px;
   border-radius: 10%;
+}
+
+#hairpage .owl-carousel div {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#hairpage .owl-carousel h3 {
+  background: rgba(20, 20, 70, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2%;
+  border-radius: 10px;
 }
 
 /* SHAVE PAGE */
@@ -368,19 +404,6 @@ footer {
   background-color: rgb(20, 26, 77);
   color: white;
   margin-bottom: 50px;
-}
-
-#shavepage .banner .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: right;
-}
-
-#shavepage .banner p {
-  font-size: 20px;
 }
 
 #shavepage .products {
@@ -436,15 +459,8 @@ footer {
   background-image: linear-gradient(to bottom right, #18213e, white) !important;
 }
 
-.owl-prev,
-.owl-next {
-  padding: 10px !important;
-  color: white !important;
-  background-color: #182f6e !important;
-  width: 50px !important;
-  height: 50px !important;
-  margin-left: 5px !important;
-  margin-right: 5px !important;
+#shavepage .owl-height {
+  height: 180px !important;
 }
 
 /* PERFUME PAGE */
@@ -453,10 +469,10 @@ footer {
 
 #perfumepage .banner {
   padding-bottom: 50px;
+  background-color: rgb(226, 226, 226);
 }
 
 #perfumepage .banner .text {
-  background-color: rgb(226, 226, 226);
   padding: 10px;
   padding-top: 100px;
   font-size: large;
@@ -467,6 +483,10 @@ footer {
   padding-bottom: 50px;
 }
 
+#perfumepage .products a {
+  text-decoration: none;
+}
+
 #perfumepage .card {
   border: none;
   padding: 10px;
@@ -474,5 +494,22 @@ footer {
 }
 
 #perfumepage .description {
-  padding-top: 50px;
+  background-color: #cccccc;
+  height: 760px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#perfumepage .description .text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #18213e;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: rgba(241, 241, 241, 0.5);
 }

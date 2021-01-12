@@ -4,7 +4,6 @@ $("#homepage .owl-carousel").owlCarousel({
   rewind: true,
   responsiveClass: true,
   autoHeight: true,
- 
   dots: false,
   responsive: {
     0: {
@@ -31,8 +30,6 @@ $("#hairpage .owl-carousel").owlCarousel({
   rewind: true,
   responsiveClass: true,
   autoHeight: true,
-  autoplayTimeout: 2000,
-  smartSpeed: 10000,
   dots: false,
   maxHeight: 80,
   responsive: {
@@ -59,12 +56,7 @@ $(".comments  .owl-carousel").owlCarousel({
   rewind: true,
   responsiveClass: true,
   autoHeight: true,
-  autoplayTimeout: 4000,
-  smartSpeed: 2735,
-  dots: true,
-  nav: true,
-  dotsEach: true,
-  maxHeight: 80,
+  autoHeight: true,
   responsive: {
     0: {
       items: 1,

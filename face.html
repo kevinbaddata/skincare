@@ -3,7 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skin Care</title>
+    <title>Mandon | Ansiktet</title>
+    <meta
+      name="description"
+      content="Mandon sells skin-care products for men. These products include face cream, shampoo, perfume and razors."
+    />
+    <meta name="keywords" content="Shampoo, Trimmer, Facial, skin care" />
+    <meta name="author" content="Kevin Duzguner" />
+    <meta property="og:site_name" content="Mandon Company" />
+    <meta property="og:title" content="Skin care" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mandon.netlify.app/" />
+    <meta
+      property="og:image"
+      content="https://mandon.netlify.app/assets/svg/logo.svg"
+    />
+    <meta
+      property="og:description"
+      content="Mandon sells skin-care products for men. These products include face cream, shampoo, perfume and razors."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="Mandon Company" />
+    <meta
+      name="twitter:description"
+      content="Mandon sells skin-care products for men. These products include face cream, shampoo, perfume and razors."
+    />
+    <meta name="twitter:creator" content="" />
+    <meta
+      name="twitter:image:src"
+      content="https://mandon.netlify.app/assets/svg/logo.svg"
+    />
     <link href="assets/svg/logo.svg" rel="icon" />
     <link href="assets/svg/logo.svg" rel="apple-touch-icon" />
     <link
@@ -107,15 +137,16 @@
     <main id="facepage">
       <!-- BANNER -->
       <section class="banner">
-        <div
-          class="image"
-          style="background: url('assets/img/face-banner1.png')"
-        ></div>
-        <div class="text">
-          <h2>Hud Vård</h2>
-          <br />
-          <p>Vi skapar hårsprodukter som män föreslår</p>
-          <p>Skrolla ner för att ta syn på våra produkter</p>
+        <div class="row">
+          <div class="col-lg-4 col-md-12 text">
+            <h1>HUD VARD</h1>
+            <br />
+            <p>Vi skapar hårsprodukter som män föreslår</p>
+            <p>Skrolla ner för att ta syn på våra produkter</p>
+          </div>
+          <div class="col-lg-8 col-md-12">
+            <img src="assets/img/facebanner.png" alt="face banner" />
+          </div>
         </div>
       </section>
 
@@ -126,14 +157,14 @@
             <div class="card">
               <div class="bg">
                 <img
-                  src="assets/img/download-removebg-preview (1).png"
+                  src="assets/img/faceproductone.png"
                   alt="mandon face care"
                 />
               </div>
-              <h3>MEN+CARE EXTRA</h3>
+              <h3>ACO</h3>
               <h4>150Kr</h4>
               <button
-                data-name="men+careextra"
+                data-name="ACO-Face-Cream"
                 data-price="150"
                 class="add-to-cart"
               >
@@ -145,14 +176,14 @@
             <div class="card">
               <div class="bg">
                 <img
-                  src="assets/img/download-removebg-preview (1).png"
+                  src="assets/img/faceproductfour.png"
                   alt="mandon face care"
                 />
               </div>
-              <h3>MEN+CARE EXTRA</h3>
+              <h3>X MEN</h3>
               <h4>150Kr</h4>
               <button
-                data-name="men+careextra"
+                data-name="XMEN-Face-Cream"
                 data-price="150"
                 class="add-to-cart"
               >
@@ -164,14 +195,14 @@
             <div class="card">
               <div class="bg">
                 <img
-                  src="assets/img/download-removebg-preview (1).png"
+                  src="assets/img/faceproductfive.png"
                   alt="mandon face care"
                 />
               </div>
-              <h3>MEN+CARE EXTRA</h3>
+              <h3>LAB SERIES</h3>
               <h4>150Kr</h4>
               <button
-                data-name="men+careextra"
+                data-name="LAB-Face-Cream"
                 data-price="150"
                 class="add-to-cart"
               >
@@ -186,14 +217,14 @@
             <div class="card">
               <div class="bg">
                 <img
-                  src="assets/img/51iZDesybqL._SY355_-removebg-preview.png"
+                  src="assets/img/faceproducttwo.png"
                   alt="mandon face care"
                 />
               </div>
-              <h3>MEN+CARE EXTRA</h3>
+              <h3>MEN CARE</h3>
               <h4>150Kr</h4>
               <button
-                data-name="men+careextra"
+                data-name="MEN-CARE-Face-Cream"
                 data-price="150"
                 class="add-to-cart"
               >
@@ -205,14 +236,14 @@
             <div class="card">
               <div class="bg">
                 <img
-                  src="assets/img/51iZDesybqL._SY355_-removebg-preview.png"
+                  src="assets/img/faceproductthree.png"
                   alt="mandon face care"
                 />
               </div>
-              <h3>MEN+CARE EXTRA</h3>
+              <h3>MEN ESSENTIAL</h3>
               <h4>150Kr</h4>
               <button
-                data-name="men+careextra"
+                data-name="MEN-ESSENTIAL-Face-Cream"
                 data-price="150"
                 class="add-to-cart"
               >
@@ -227,107 +258,125 @@
       <!-- HOWTO -->
       <section class="howto">
         <h2>GÖR DET MESTA AV DINA PRODUKTER</h2>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-12">
-              <img
-                src="assets/img/TAB-490624.jpg.ulenscale.380x380.jpg"
-                alt="mandon face care"
-              />
-              <img src="assets/svg/book.svg" alt="read" />
-              <h4>HUR HANTERAR MAN SVETTNING</h4>
-              <p>
-                <b> VÄLJ ETT STARKARE SKYDD.</b> Bekämpa svett med en deodorant
-                som jobbar hårt. Dove Men+Care Clean Comfort Antiperspirant
-                skyddar dig mot svett och lukt i 48 timmar. Den återfuktar också
-                huden, med ¼ fuktighetskräms teknologi, för en antiperspirant
-                deodorant som är tuff mot svett inte mot din hud <br />
-                APPLICERA INNAN DU LÄGGER DIG. Applicera en antiperspirant
-                deodorant innan du lägger dig istället för att göra det på
-                morgonen. Att använda antiperspirant deodorant på kvällen ger
-                den mer tid att sjunka in i huden och verka – då är du bättre
-                skyddad på morgonen <br />
-                ANVÄND DEODORANT PÅ SVAL HUD. Om du föredrar att använda
-                deodorant på morgonen, vänta i 10 minuter efter din dusch innan
-                du applicerar deodoranten. Antiperspiranta deodoranter verkar
-                bäst på en sval och torr hud <br />
-                ANVÄND TUNNA KLÄDER. Enklaste sättet att undvika svett är att
-                välja sina kläder noga. Syntetiska material och tighta kläder
-                kan ibland öka svettning. Välj istället tunnare kläder för att
-                ge din hud rum att andas <br />
-                TA MED DEODORANTEN. Svettning kan också vara ett resultat av
-                hårt jobb på gymmet. Om du går ofta till gymmet på dagen så
-                packa med en Dove Men+Care Extra Fresh roll-on Antiperspirant
-                deodorant. Deodoranten är kompakt och lätt att ta med sig, och
-                perfekt att ha med i gymväskan för att användas efter träningen
-                <br />
-                KONTINUERLIG ÖVERDRIVEN SVETTNING. Om du lider av överdriven
-                svettning hela tiden kan det vara fråga om hyperhidrosis, eller
-                överaktiva svettkörtlar. Om du tror det kan vara fråga om det
-                ska du kontakt din läkare, så kan du diskutera en diagnos och
-                möjlig vård
-              </p>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <img src="assets/img/download.jpg" alt="mandon face care" />
-              <img src="assets/svg/book.svg" alt="read" />
-              <h4>DUSCHA OCH BEKÄMPA TORR HUD</h4>
-              <p>
-                UNDVIK TVÅL. Vanlig tvål kan torka ut din hud, försök att
-                undvika tvål som torkar ut din hud. Dove Men+Care Clean Comfort
-                Duschcrème använder MicroMoisture teknologi för att hjälpa att
-                återfukta huden och skydda den mot torka och irritation <br />
-                HÅLL DIG SVAL. Hett vatten kan torka din hud ännu mer, eftersom
-                det heta vattnet smälter bort hudens naturliga oljor. Håll dig
-                till varmt vatten istället, som rengör huden och behåller hudens
-                fukt <br />
-                DUSCHA KORT. Om du inte kan leva utan heta duschar, försök att
-                duscha kort istället för att inte bryta ner hudens proteiner som
-                håller den återfuktad <br />
-                RENGÖR OCH ÅTERFUKTA. De bästa duschcrèmerna för män både rengör
-                och återfuktar huden. Dove Men+Care Clean Comfort Duschcrème är
-                en återfuktande duschcrème skapad med MicroMoisture teknologi,
-                som återfuktar huden, rengör och är lätt att skölja av <br />
-                ANSIKTE. Ditt ansikte utsätts ofta för vind och sol som kan
-                torka ut huden. Dove Men+Care Fresh Awake Duschcrème hjälper att
-                skydda ditt ansikte och kropp från torrhet <br />
-                SKRUBBORSTE. Använd en skrubborste för att mjukgöra hård hud.
-                Kombinera med den bästa duschcrèmen för att rengöra och få bort
-                torr hud och döda hudceller
-              </p>
-            </div>
-            <div class="col-lg-4 col-md-12">
-              <img
-                src="assets/img/TAB-490661.jpg.ulenscale.380x380.jpg"
-                alt="mandon face care"
-              />
-              <img src="assets/svg/book.svg" alt="read" />
-              <h4>MAXA DIN DUSCH MED DUSCHCRÈME FÖR MÄN</h4>
-              <p>
-                HÅR. Efter att du tvättat ditt hår sköljer du bort schamporester
-                från kroppen med Dove Men+Care Duschcrème
-                <br />
-                KROPP. Den bästa duschcrèmen för män rengör noggrant utan att
-                torka ut huden. Dove Men+Care Extra Fresh Duschcrème med
-                MicroMoisture teknologin hjälper huden behålla sin fukt med en
-                uppfriskande rengöring <br />
-                ANSIKTE. Utöver att Dove Men+Care Clean Comfort Duschcrème är en
-                bra duschcrème så är den perfekt som ansiktsrengöring också.
-                Använd varmt vatten, inte hett, för att undvika att torka ut
-                huden. Att tvätta ansiktet sist gör det fuktigt, som hjälper
-                till att ge jämnare resultat när man rakar sig <br />
-                RAKNING. Ångan från duschen kan hjälpa att göra ansiktshåret
-                mjukare, och gör det lättare att raka bort skägg stubb <br />
-                EFTER RAKNING. Minska risken för hudirritation genom att
-                applicera en after-shave efter du duschat. Den hjälper att hålla
-                huden mjuk och bekväm <br />
-                DEODORANT. Genom att vänta tills din kropp svalnat efter duschen
-                innan du applicerar antiperspirant deodorant kommer det att
-                hjälpa dig få den bästa effekten av deodoranten. Heta duschar
-                öppnar hudens porer och gör den mindre mottaglig för
-                antiperspiranter som appliceras
-              </p>
-            </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-12 p-4">
+            <img src="assets/img/facehowtoone.png" alt="mandon face care" />
+            <img src="assets/svg/book.svg" alt="read" />
+            <h4>HUR HANTERAR MAN SVETTNING</h4>
+            <p>
+              <b> VÄLJ ETT STARKARE SKYDD.</b>
+              Bekämpa svett med en deodorant som jobbar hårt. Dove Men+Care
+              Clean Comfort Antiperspirant skyddar dig mot svett och lukt i 48
+              timmar. Den återfuktar också huden, med ¼ fuktighetskräms
+              teknologi, för en antiperspirant deodorant som är tuff mot svett
+              inte mot din hud
+              <br />
+              <b>APPLICERA INNAN DU LÄGGER DIG.</b>
+              Applicera en antiperspirant deodorant innan du lägger dig istället
+              för att göra det på morgonen. Att använda antiperspirant deodorant
+              på kvällen ger den mer tid att sjunka in i huden och verka – då är
+              du bättre skyddad på morgonen
+              <br />
+              <b>ANVÄND DEODORANT PÅ SVAL HUD.</b>
+              Om du föredrar att använda deodorant på morgonen, vänta i 10
+              minuter efter din dusch innan du applicerar deodoranten.
+              Antiperspiranta deodoranter verkar bäst på en sval och torr hud
+              <br />
+              <b>ANVÄND TUNNA KLÄDER.</b>
+              Enklaste sättet att undvika svett är att välja sina kläder noga.
+              Syntetiska material och tighta kläder kan ibland öka svettning.
+              Välj istället tunnare kläder för att ge din hud rum att andas
+              <br />
+              <b>TA MED DEODORANTEN.</b>
+              Svettning kan också vara ett resultat av hårt jobb på gymmet. Om
+              du går ofta till gymmet på dagen så packa med en Dove Men+Care
+              Extra Fresh roll-on Antiperspirant deodorant. Deodoranten är
+              kompakt och lätt att ta med sig, och perfekt att ha med i
+              gymväskan för att användas efter träningen
+              <br />
+              <b> KONTINUERLIG ÖVERDRIVEN SVETTNING.</b>
+              Om du lider av överdriven svettning hela tiden kan det vara fråga
+              om hyperhidrosis, eller överaktiva svettkörtlar. Om du tror det
+              kan vara fråga om det ska du kontakt din läkare, så kan du
+              diskutera en diagnos och möjlig vård
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 p-4">
+            <img src="assets/img/facehowtotwo.png" alt="mandon face care" />
+            <img src="assets/svg/book.svg" alt="read" />
+            <h4>DUSCHA OCH BEKÄMPA TORR HUD</h4>
+            <p>
+              <b>UNDVIK TVÅL.</b>
+              Vanlig tvål kan torka ut din hud, försök att undvika tvål som
+              torkar ut din hud. Dove Men+Care Clean Comfort Duschcrème använder
+              MicroMoisture teknologi för att hjälpa att återfukta huden och
+              skydda den mot torka och irritation
+              <br />
+              <b> HÅLL DIG SVAL.</b>
+              Hett vatten kan torka din hud ännu mer, eftersom det heta vattnet
+              smälter bort hudens naturliga oljor. Håll dig till varmt vatten
+              istället, som rengör huden och behåller hudens fukt
+              <br />
+              <b>DUSCHA KORT.</b>
+              Om du inte kan leva utan heta duschar, försök att duscha kort
+              istället för att inte bryta ner hudens proteiner som håller den
+              återfuktad
+              <br />
+              <b>RENGÖR OCH ÅTERFUKTA.</b>
+              De bästa duschcrèmerna för män både rengör och återfuktar huden.
+              Dove Men+Care Clean Comfort Duschcrème är en återfuktande
+              duschcrème skapad med MicroMoisture teknologi, som återfuktar
+              huden, rengör och är lätt att skölja av
+              <br />
+              <b>ANSIKTE.</b>
+              Ditt ansikte utsätts ofta för vind och sol som kan torka ut huden.
+              Dove Men+Care Fresh Awake Duschcrème hjälper att skydda ditt
+              ansikte och kropp från torrhet
+              <br />
+              <b>SKRUBBORSTE. </b>
+              Använd en skrubborste för att mjukgöra hård hud. Kombinera med den
+              bästa duschcrèmen för att rengöra och få bort torr hud och döda
+              hudceller
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-12 p-4">
+            <img src="assets/img/facehowtothree.png" alt="mandon face care" />
+            <img src="assets/svg/book.svg" alt="read" />
+            <h4>MAXA DIN DUSCH MED DUSCHCRÈME FÖR MÄN</h4>
+            <p>
+              <b> HÅR.</b>
+              Efter att du tvättat ditt hår sköljer du bort schamporester från
+              kroppen med Dove Men+Care Duschcrème
+              <br />
+              <b>KROPP.</b>
+              Den bästa duschcrèmen för män rengör noggrant utan att torka ut
+              huden. Dove Men+Care Extra Fresh Duschcrème med MicroMoisture
+              teknologin hjälper huden behålla sin fukt med en uppfriskande
+              rengöring <br />
+
+              <b>ANSIKTE.</b>
+              Utöver att Dove Men+Care Clean Comfort Duschcrème är en bra
+              duschcrème så är den perfekt som ansiktsrengöring också. Använd
+              varmt vatten, inte hett, för att undvika att torka ut huden. Att
+              tvätta ansiktet sist gör det fuktigt, som hjälper till att ge
+              jämnare resultat när man rakar sig <br />
+
+              <b>RAKNING.</b>
+              Ångan från duschen kan hjälpa att göra ansiktshåret mjukare, och
+              gör det lättare att raka bort skägg stubb <br />
+
+              <b>EFTER RAKNING.</b>
+              Minska risken för hudirritation genom att applicera en after-shave
+              efter du duschat. Den hjälper att hålla huden mjuk och bekväm
+              <br />
+
+              <b> DEODORANT.</b>
+              Genom att vänta tills din kropp svalnat efter duschen innan du
+              applicerar antiperspirant deodorant kommer det att hjälpa dig få
+              den bästa effekten av deodoranten. Heta duschar öppnar hudens
+              porer och gör den mindre mottaglig för antiperspiranter som
+              appliceras
+            </p>
           </div>
         </div>
       </section>
