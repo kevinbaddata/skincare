@@ -11,8 +11,8 @@ body {
 }
 
 .row {
-  --bs-gutter-x: 0;
-  --bs-gutter-y: 0;
+  /* --bs-gutter-x: 0;
+  --bs-gutter-y: 0; */
   margin: 0;
   padding: 0;
 }
