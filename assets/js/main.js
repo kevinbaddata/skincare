@@ -225,12 +225,17 @@ $(".add-to-cart").click(function (event) {
   var price = Number($(this).data("price"));
   shoppingCart.addItemToCart(name, price, 1);
   displayCart();
+  var cartLength = shoppingCart.listCart().length;
+  if (cartLength > 0) {
+    $(".number").html(cartLength);
+  }
 });
 
 // Clear items
 $(".clear-cart").click(function () {
   shoppingCart.clearCart();
   displayCart();
+  $(".number").html("0");
 });
 
 function displayCart() {
@@ -276,6 +281,9 @@ $(".show-cart").on("click", ".delete-item", function (event) {
   var name = $(this).data("name");
   shoppingCart.removeItemFromCartAll(name);
   displayCart();
+  var cartLength = shoppingCart.listCart().length;
+
+  $(".number").html(cartLength);
 });
 
 // -1

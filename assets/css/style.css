@@ -67,7 +67,6 @@ ul {
   max-width: 6em;
   height: 10vh;
   border-radius: 5px;
-  padding: 10px;
   cursor: pointer;
   background: linear-gradient(to bottom right, #00aeef, #182f6e);
   z-index: 999999999999;
@@ -75,6 +74,26 @@ ul {
 
 .cart-icon:hover {
   background: linear-gradient(to bottom right, #182f6e, #00aeef);
+}
+
+.cart-icon img {
+  max-width: 5em;
+  height: 9vh;
+}
+
+.cart-icon span {
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: -9px;
+  left: -6px;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 .modal-footer img {
@@ -318,7 +337,7 @@ footer {
   padding: 10px;
 }
 
-#facepage .howto img[alt="read"] {
+#facepage .howto img[alt="mandon website read"] {
   margin: auto;
   width: 25px;
   height: 25px;
