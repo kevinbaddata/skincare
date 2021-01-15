@@ -152,7 +152,7 @@ footer {
 
 .link:before {
   content: "\➜";
-  color: red;
+  color: #00aeef;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +161,7 @@ footer {
   left: 0px;
   height: 100%;
   width: 30px;
-  background-color: yellow;
+  background-color: white;
   opacity: 0.3;
   border-radius: 0 50% 50% 0;
   transform: scale(0, 1);
@@ -195,7 +195,11 @@ footer {
 }
 
 #homepage .description {
-  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   color: white;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -269,10 +273,15 @@ footer {
   width: 50%;
   height: 50%;
   filter: drop-shadow(16px 16px 10px black);
+  /* box-shadow: -20px -21px 15px 3px rgba(0, 0, 0, 0.72); */
 }
 
 #facepage .products .bg {
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,7 +374,11 @@ footer {
 }
 
 #hairpage .description {
-  background: linear-gradient(179deg, rgb(216, 234, 236) 0%, rgb(168, 146, 172) 95%);
+  background: linear-gradient(
+    179deg,
+    rgb(216, 234, 236) 0%,
+    rgb(168, 146, 172) 95%
+  );
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -512,4 +525,84 @@ footer {
   font-weight: bold;
   letter-spacing: 1px;
   background: rgba(241, 241, 241, 0.5);
+}
+
+.turquoise {
+  background-image: linear-gradient(to bottom right, #c1e9d9, #ecedec);
+  transition: all 2s;
+}
+.turquoise:hover {
+  background-image: linear-gradient(to bottom right, #ecedec, #c1e9d9);
+}
+
+.green {
+  background-image: linear-gradient(to bottom right, #6ca101, #e4e5e7);
+  transition: all 2s;
+}
+
+.green:hover {
+  background-image: linear-gradient(to bottom right, #e4e5e7, #6ca101);
+}
+
+.dark-blue {
+  background-image: linear-gradient(to bottom right, #8199df, #f6f6f5);
+  transition: all 2s;
+}
+
+.dark-blue:hover {
+  background-image: linear-gradient(to bottom right, #f6f6f5, #8199df);
+}
+
+.purple {
+  background-image: linear-gradient(to bottom right, #b45f98, #fdfcfd);
+  transition: all 2s;
+}
+
+.purple:hover {
+  background-image: linear-gradient(to bottom right, #fdfcfd, #b45f98);
+}
+
+.aco {
+  background-image: linear-gradient(to bottom right, #5e9784, #505656);
+  transition: all 2s;
+}
+
+.aco:hover {
+  background-image: linear-gradient(to bottom right, #505656, #5e9784);
+}
+
+.x-men {
+  background-image: linear-gradient(to bottom right, #ea7237, #313131);
+  transition: all 2s;
+}
+
+.x-men:hover {
+  background-image: linear-gradient(to bottom right, #313131, #ea7237);
+}
+
+.lab-series {
+  background-image: linear-gradient(to bottom right, #1963b3, #555353);
+  transition: all 2s;
+}
+
+.lab-series:hover {
+  background-image: linear-gradient(to bottom right, #555353, #1963b3);
+}
+
+.men-care {
+  background-image: linear-gradient(to bottom right, #36466b, #ced5e3);
+  transition: all 2s;
+}
+
+.men-care:hover {
+  background-image: linear-gradient(to bottom right, #ced5e3, #36466b);
+}
+.men-essential {
+  background-image: linear-gradient(to bottom right, #53726c, #2e3a36);
+
+  transition: all 2s;
+}
+
+.men-essential:hover {
+  background-image: linear-gradient(to bottom right, #2e3a36, #53726c);
 }
