@@ -56,7 +56,6 @@ $(".comments  .owl-carousel").owlCarousel({
   rewind: true,
   responsiveClass: true,
   autoHeight: true,
-  autoHeight: true,
   responsive: {
     0: {
       items: 1,
@@ -76,18 +75,20 @@ $(".comments  .owl-carousel").owlCarousel({
   },
 });
 
-function cart_open() {
-  document.getElementById("cart").style.width = "100%";
-  document.getElementById("cart").style.display = "flex";
-}
-function cart_close() {
-  document.getElementById("cart").style.display = "none";
-}
+$(".cart-icon").click(function () {
+  $("#cart").css("width", "100%");
+  $("#cart").css("display", "flex");
+});
+
+$(".close").click(function () {
+  $("#cart").css("display", "none");
+});
 
 var shoppingCart = (function () {
   // =============================
   // Private methods and propeties
   // =============================
+
   cart = [];
 
   // Constructor
@@ -124,8 +125,8 @@ var shoppingCart = (function () {
         return;
       }
     }
-    var item = new Item(name, price, count);
-    cart.push(item);
+    var newItem = new Item(name, price, count);
+    cart.push(newItem);
     saveCart();
   };
   // Set count from item
@@ -172,7 +173,9 @@ var shoppingCart = (function () {
   obj.totalCount = function () {
     var totalCount = 0;
     for (var item in cart) {
-      totalCount += cart[item].count;
+      if (cart.hasOwnProperty(item)) {
+        totalCount += cart[item].count;
+      }
     }
     return totalCount;
   };
@@ -181,7 +184,9 @@ var shoppingCart = (function () {
   obj.totalCart = function () {
     var totalCart = 0;
     for (var item in cart) {
-      totalCart += cart[item].price * cart[item].count;
+      if (cart.hasOwnProperty(item)) {
+        totalCart += cart[item].price * cart[item].count;
+      }
     }
     return Number(totalCart.toFixed(2));
   };
@@ -189,14 +194,18 @@ var shoppingCart = (function () {
   // List cart
   obj.listCart = function () {
     var cartCopy = [];
-    for (i in cart) {
-      item = cart[i];
-      itemCopy = {};
-      for (p in item) {
-        itemCopy[p] = item[p];
+    for (var i in cart) {
+      if (cart.hasOwnProperty(i)) {
+        item = cart[i];
+        itemCopy = {};
+        for (var p in item) {
+          if (item.hasOwnProperty(p)) {
+            itemCopy[p] = item[p];
+          }
+        }
+        itemCopy.total = Number(item.price * item.count).toFixed(2);
+        cartCopy.push(itemCopy);
       }
-      itemCopy.total = Number(item.price * item.count).toFixed(2);
-      cartCopy.push(itemCopy);
     }
     return cartCopy;
   };
@@ -225,50 +234,47 @@ $(".add-to-cart").click(function (event) {
   var price = Number($(this).data("price"));
   shoppingCart.addItemToCart(name, price, 1);
   displayCart();
-  var cartLength = shoppingCart.listCart().length;
-  if (cartLength > 0) {
-    $(".number").html(cartLength);
-  }
 });
 
 // Clear items
 $(".clear-cart").click(function () {
   shoppingCart.clearCart();
   displayCart();
-  $(".number").html("0");
 });
 
 function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for (var i in cartArray) {
-    output +=
-      "<tr>" +
-      "<td>" +
-      cartArray[i].name +
-      "</td>" +
-      "<td>(" +
-      cartArray[i].price +
-      ")</td>" +
-      "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" +
-      cartArray[i].name +
-      ">-</button>" +
-      "<input type='number' class='item-count form-control' data-name='" +
-      cartArray[i].name +
-      "' value='" +
-      cartArray[i].count +
-      "'>" +
-      "<button class='plus-item btn btn-primary input-group-addon' data-name=" +
-      cartArray[i].name +
-      ">+</button></div></td>" +
-      "<td><button class='delete-item btn btn-danger bg-danger px-4' data-name=" +
-      cartArray[i].name +
-      ">Remove</button></td>" +
-      " = " +
-      "<td>" +
-      cartArray[i].total +
-      "</td>" +
-      "</tr>";
+    if (cartArray.hasOwnProperty(i)) {
+      output +=
+        "<tr>" +
+        "<td>" +
+        cartArray[i].name +
+        "</td>" +
+        "<td>(" +
+        cartArray[i].price +
+        ")</td>" +
+        "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" +
+        cartArray[i].name +
+        ">-</button>" +
+        "<input type='number' class='item-count form-control' data-name='" +
+        cartArray[i].name +
+        "' value='" +
+        cartArray[i].count +
+        "'>" +
+        "<button class='plus-item btn btn-primary input-group-addon' data-name=" +
+        cartArray[i].name +
+        ">+</button></div></td>" +
+        "<td><button class='delete-item btn btn-danger bg-danger px-4' data-name=" +
+        cartArray[i].name +
+        ">Remove</button></td>" +
+        " = " +
+        "<td>" +
+        cartArray[i].total +
+        "</td>" +
+        "</tr>";
+    }
   }
   $(".show-cart").html(output);
   $(".total-cart").html(shoppingCart.totalCart());
@@ -281,9 +287,6 @@ $(".show-cart").on("click", ".delete-item", function (event) {
   var name = $(this).data("name");
   shoppingCart.removeItemFromCartAll(name);
   displayCart();
-  var cartLength = shoppingCart.listCart().length;
-
-  $(".number").html(cartLength);
 });
 
 // -1

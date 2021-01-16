@@ -365,6 +365,10 @@ footer {
   margin-top: 10px;
 }
 
+#hairpage .banner h1 {
+  font-size: 3em;
+}
+
 #hairpage .products {
   text-align: center;
   padding-top: 50px;
@@ -403,7 +407,7 @@ footer {
 }
 
 #hairpage .description img {
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
